@@ -15,8 +15,8 @@ export const nationalPartners: Partner[] = [
     description: "DIMO is a leading technology company in Sri Lanka.",
   },
   {
-    name: "Inovate",
-    logo: "/images/partners/Inovate - National Partner.avif",
+    name: "Innovate",
+    logo: "/images/partners/Innovate - National Partner.avif",
     category: "National Partner",
     description: "Inovate is a leading technology company in Sri Lanka.",
   },

@@ -1,8 +1,34 @@
-import React from 'react'
-import { nationalPartners } from '@/constants/patners'
-import { globalPartners } from '@/constants/patners'
+"use client";
+import React, { useState, useRef, useEffect } from "react";
+import { nationalPartners } from "@/constants/patners";
+import { globalPartners } from "@/constants/patners";
+import NationalPartnerCard from "./subcomponents/NationalPartnerCard";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselApi,
+} from "../ui/carousel";
+import * as Autoplay from "embla-carousel-autoplay";
 
 const OurPartners = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+
   return (
     <section id="partners" className="py-24 bg-card/30">
       <div className="container mx-auto px-4 lg:px-8">
@@ -21,25 +47,45 @@ const OurPartners = () => {
           <h3 className="text-2xl font-bold mb-8 text-center text-foreground">
             National Partners
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {nationalPartners.map((partner, index) => (
-              <div
-                key={index}
-                className="bg-card border border-border rounded-lg p-8 text-center hover:border-primary/50 transition-all hover:scale-105"
-              >
-                <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">
-                    {partner.name.charAt(0)}
-                  </span>
-                </div>
-                <h4 className="text-xl font-bold text-foreground mb-2">
-                  {partner.name}
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  {partner.category}
-                </p>
-              </div>
-            ))}
+          <div className="relative">
+            {/* Auto-playing Carousel */}
+            <Carousel
+              setApi={setApi}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay.default({
+                  delay: 3000,
+                  stopOnInteraction: false,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {nationalPartners.map((partner, index) => (
+                  <CarouselItem key={index} className="basis-1/4">
+                    <NationalPartnerCard partner={partner} />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {Array.from({ length: count }, (_, index) => (
+                <button
+                  key={index}
+                  onClick={() => api?.scrollTo(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    index === current - 1
+                      ? "bg-primary"
+                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
@@ -76,6 +122,6 @@ const OurPartners = () => {
       </div>
     </section>
   );
-}
+};
 
-export default OurPartners
+export default OurPartners;
