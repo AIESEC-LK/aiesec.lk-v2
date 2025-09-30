@@ -1,0 +1,3 @@
+echo "🔴 It is required to build the project before pushing changes to validate that everything compiles correctly."
+
+npm run build

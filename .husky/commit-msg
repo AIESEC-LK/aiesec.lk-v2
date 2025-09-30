@@ -1,0 +1,10 @@
+echo ""
+echo "🔒 Commit message format is enforced!"
+echo "✅ Use format: type(scope?): subject"
+echo "✅ Optional scope: a noun describing a section of the codebase"
+echo "🔧 Example: feat(login): add login form validation feature"
+echo "🔧 Example: fix: correct typo in README"
+echo "🔹 Valid types: feat, fix, docs, chore, refactor, test, etc."
+echo ""
+
+npx commitlint --edit .git/COMMIT_EDITMSG
