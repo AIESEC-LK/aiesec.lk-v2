@@ -5,11 +5,13 @@ import Footer from "@/components/Footer/Footer";
 import OurStory from "@/components/OurStory/OurStory";
 
 import { Entities } from "@/components/Entities/Entities";
+import { OpportunitiesForPartners } from "@/components/OpportunitiesForPartners/OpportunitiesForPartners";
 export default function Home() {
   return (
     <div>
       <OurStory />
       <Entities />
+      <OpportunitiesForPartners />
       <OurPartners />
       <FAQ />
       <Contact />
