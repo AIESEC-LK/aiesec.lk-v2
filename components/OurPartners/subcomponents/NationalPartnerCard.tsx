@@ -1,14 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { NationalPartnerCardProps } from "@/types/partner";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardDescription,
-  CardTitle,
-  CardFooter,
-} from "@/components/ui/card";
 const NationalPartnerCard = ({ partner }: NationalPartnerCardProps) => {
   const [colors, setColors] = useState<string[]>([
     "#6366f1",
@@ -82,14 +74,17 @@ const NationalPartnerCard = ({ partner }: NationalPartnerCardProps) => {
   };
 
   return (
-    <Card className="max-w-xs pt-0">
+    <div className="max-w-xs group cursor-pointer mx-auto">
       <canvas ref={canvasRef} style={{ display: "none" }} />
-      <CardContent className="px-0">
+
+      {/* Card Container - Fixed size */}
+      <div className="relative bg-white rounded-2xl border border-gray-200 transition-shadow duration-500 ease-in-out overflow-hidden h-96 flex flex-col">
+        {/* Image Section - Height changes on hover - SHRINKS on hover */}
         <div
-          className="relative w-full h-52 rounded-t-xl overflow-hidden"
+          className="relative w-full h-64 group-hover:h-48 rounded-t-2xl overflow-visible transition-all duration-500 ease-in-out"
           style={gradientStyle}
         >
-          {/* Blurred background image */}
+          {/* Blurred background */}
           <img
             ref={imageRef}
             src={partner.logo}
@@ -97,37 +92,58 @@ const NationalPartnerCard = ({ partner }: NationalPartnerCardProps) => {
           />
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-white/10"></div>
-          {/* Main image - 60% height */}
-          <div className="relative h-full flex items-center justify-center p-4">
+
+          {/* Main image */}
+          <div className="relative h-full flex items-center justify-center p-6">
             <img
               src={partner.logo}
               alt={partner.name}
-              className="w-full h-auto object-contain drop-shadow-lg"
+              className="w-full h-auto object-contain drop-shadow-2xl group-hover:scale-110 transition-transform duration-500 ease-out"
               style={{ maxHeight: "60%" }}
             />
           </div>
+
+          {/* Convex curve overlay (bulging outward) */}
+          <div
+            className="absolute -bottom-1 left-0 right-0 h-8 bg-white group-hover:opacity-0 transition-opacity duration-500 ease-in-out"
+            style={{
+              borderTopLeftRadius: "50% 100%",
+              borderTopRightRadius: "50% 100%",
+            }}
+          ></div>
         </div>
-      </CardContent>
-      <CardHeader className="text-center">
-        <CardTitle className="text-lg font-bold">{partner.name}</CardTitle>
-        <CardDescription>{partner.description}</CardDescription>
-      </CardHeader>
-      <CardFooter className="gap-3 max-sm:flex-col max-sm:items-stretch">
-        <div className="w-full flex justify-center">
-          <span
-            className={`text-sm font-medium px-2 py-1 rounded ${
-              partner.category === "National Partner"
-                ? "bg-amber-100 text-amber-800"
-                : partner.category === "National Talent Partner"
-                ? "bg-green-100 text-green-800"
-                : "bg-gray-100 text-gray-800"
-            }`}
-          >
-            {partner.category}
-          </span>
+
+        {/* Content Section - Fills remaining space */}
+        <div className="relative bg-white flex-1 px-6 py-4 flex flex-col justify-between">
+          {/* Title - always visible */}
+          <h3 className="text-xl font-bold text-center mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-300">
+            {partner.name}
+          </h3>
+
+          {/* Description - fades in on hover */}
+          <div className="max-h-0 opacity-0 overflow-hidden group-hover:max-h-20 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+            <p className="text-sm text-center text-muted-foreground group-hover:text-primary/70 mb-3 transition-colors duration-300">
+              {partner.description}
+            </p>
+          </div>
+
+          {/* Category Badge */}
+          <div className="flex justify-center">
+            <span
+              className={`text-xs font-semibold px-3 py-1.5 rounded-full group-hover:scale-110 transition-all duration-300 ${
+                partner.category === "National Partner"
+                  ? "bg-amber-100 text-amber-800 group-hover:bg-amber-200 group-hover:shadow-md"
+                  : partner.category === "National Talent Partner"
+                  ? "bg-green-100 text-green-800 group-hover:bg-green-200 group-hover:shadow-md"
+                  : "bg-gray-100 text-gray-800 group-hover:bg-gray-200 group-hover:shadow-md"
+              }`}
+            >
+              {partner.category}
+            </span>
+          </div>
         </div>
-      </CardFooter>
-    </Card>
+      </div>
+    </div>
   );
 };
 

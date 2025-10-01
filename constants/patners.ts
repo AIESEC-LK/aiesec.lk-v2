@@ -5,8 +5,7 @@ export const nationalPartners: Partner[] = [
     name: "EFL Global",
     logo: "/images/partners/EFL Global Sri Lanka - National Partner.avif",
     category: "National Partner",
-    description:
-      "EFL Global is a leading global company in Sri Lanka.",
+    description: "EFL Global is a leading global company in Sri Lanka.",
   },
   {
     name: "DIMO",
@@ -37,8 +36,106 @@ export const nationalPartners: Partner[] = [
 export const globalPartners: Partner[] = [
   {
     name: "United Nations",
-    logo: "/images/partners/United Nations - Global Affiliation-min.avif",
+    logo: "/images/partners/United Nations - Global Partner.avif",
     category: "Global Affiliation",
-    description: "United Nations is a leading global organization in Sri Lanka.",
+    description:
+      "Leading international organization promoting peace and cooperation.",
+  },
+  {
+    name: "Alfa Laval",
+    logo: "/images/partners/Alfa Laval - Global Partner.avif",
+    category: "Global Affiliation",
+    description:
+      "Global leader in heat transfer, separation, and fluid handling.",
+  },
+  {
+    name: "DHL",
+    logo: "/images/partners/DHL - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "World's leading logistics company.",
+  },
+  {
+    name: "DP World",
+    logo: "/images/partners/DP World - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "Global provider of smart logistics solutions.",
+  },
+  {
+    name: "EATON",
+    logo: "/images/partners/EATON - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "Intelligent power management company.",
+  },
+  {
+    name: "Electrolux",
+    logo: "/images/partners/Electrolux - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "Leading global appliance company.",
+  },
+  {
+    name: "Henkel",
+    logo: "/images/partners/Henkel - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "Global leader in adhesive technologies.",
+  },
+  {
+    name: "Husqvarna",
+    logo: "/images/partners/Husqvarna - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "World leader in outdoor power products.",
+  },
+  {
+    name: "International SOS",
+    logo: "/images/partners/International SOS - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "World's leading medical and security services company.",
+  },
+  {
+    name: "Nexans",
+    logo: "/images/partners/Nexans - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "Global leader in advanced cabling systems.",
+  },
+  {
+    name: "NOKIA",
+    logo: "/images/partners/NOKIA - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "Global leader in telecommunications.",
+  },
+  {
+    name: "PWC",
+    logo: "/images/partners/PWC - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "One of the world's largest professional services networks.",
+  },
+  {
+    name: "Quantum Lead",
+    logo: "/images/partners/Quantum Lead - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "Leading global consulting firm.",
+  },
+  {
+    name: "Schneider",
+    logo: "/images/partners/Schneider - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "Global specialist in energy management.",
+  },
+  {
+    name: "TCS",
+    logo: "/images/partners/TCS - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "Leading global IT services and consulting company.",
+  },
+  {
+    name: "Terawind",
+    logo: "/images/partners/Terawind - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "Renewable energy solutions provider.",
+  },
+  {
+    name: "UNDP",
+    logo: "/images/partners/UNDP - Global Partner.avif",
+    category: "Global Affiliation",
+    description: "United Nations Development Programme.",
   },
 ];
