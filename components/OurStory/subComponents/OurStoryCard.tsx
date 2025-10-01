@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import LiquidEther from "@/components/LiquidEther";
 import {
   ourStorySriLanka,
