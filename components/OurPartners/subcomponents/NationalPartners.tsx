@@ -1,14 +1,26 @@
-"use client"
-import React, { useEffect, useState } from 'react'
-import { Carousel, CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel'
-import { nationalPartners } from '@/constants/patners'
-import * as Autoplay from 'embla-carousel-autoplay'
-import NationalPartnerCard from './NationalPartnerCard'
+"use client";
+import React, { useEffect, useState } from "react";
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { nationalPartners } from "@/constants/patners";
+import * as Autoplay from "embla-carousel-autoplay";
+import NationalPartnerCard from "./NationalPartnerCard";
 
 const NationalPartners = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const autoplayRef = React.useRef(
+    Autoplay.default({
+      delay: 4000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+    })
+  );
 
   useEffect(() => {
     if (!api) {
@@ -22,26 +34,36 @@ const NationalPartners = () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
-  
+
+  const handleMouseEnter = () => {
+    autoplayRef.current.stop();
+  };
+
+  const handleMouseLeave = () => {
+    autoplayRef.current.play();
+  };
+
   return (
     <div className="mb-16">
       <h3 className="text-2xl font-bold mb-8 text-center text-foreground">
         National Partners
       </h3>
-      <div className="relative">
+      <div
+        className="relative"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         {/* Auto-playing Carousel */}
         <Carousel
           setApi={setApi}
           opts={{
             align: "start",
             loop: true,
+            duration: 50,
+            dragFree: true,
+            skipSnaps: false,
           }}
-          plugins={[
-            Autoplay.default({
-              delay: 3000,
-              stopOnInteraction: false,
-            }),
-          ]}
+          plugins={[autoplayRef.current]}
           className="w-full py-4 "
         >
           <CarouselContent className="flex items-center py-4">
@@ -84,6 +106,6 @@ const NationalPartners = () => {
       </div>
     </div>
   );
-}
+};
 
-export default NationalPartners
+export default NationalPartners;
