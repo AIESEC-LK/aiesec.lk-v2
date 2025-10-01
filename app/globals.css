@@ -224,3 +224,38 @@ html {
 .stagger-children > *:nth-child(6) {
   animation-delay: 0.6s;
 }
+
+@keyframes scroll-right {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.group:hover .animate-scroll-right,
+.group:hover .animate-scroll-left {
+  animation-play-state: paused;
+}
