@@ -1,9 +1,10 @@
-import React, { useMemo } from "react";
+"use client";
+import React, { useMemo, Children, useRef, useEffect, useState } from "react";
 
 interface InfiniteScrollProps {
   children: React.ReactNode;
   direction?: "left" | "right" | "up" | "down";
-  speed?: number; // Duration in seconds
+  speed?: number; // Pixels per second
   pauseOnHover?: boolean;
   className?: string;
 }
@@ -11,66 +12,90 @@ interface InfiniteScrollProps {
 const InfiniteScroll: React.FC<InfiniteScrollProps> = ({
   children,
   direction = "right",
-  speed = 30,
+  speed = 50, // pixels per second
   pauseOnHover = true,
   className = "",
 }) => {
-  // Memoize animation class to prevent recalculation
-  const animationClass = useMemo(() => {
-    switch (direction) {
-      case "left":
-        return "animate-scroll-left";
-      case "right":
-        return "animate-scroll-right";
-      case "up":
-        return "animate-scroll-up";
-      case "down":
-        return "animate-scroll-down";
-      default:
-        return "animate-scroll-right";
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Convert children to array for proper handling
+  const childrenArray = useMemo(() => Children.toArray(children), [children]);
+
+  useEffect(() => {
+    const scrollElement = scrollRef.current;
+    if (!scrollElement) return;
+
+    let animationFrameId: number;
+    let currentTranslate = 0;
+    const contentWidth = scrollElement.scrollWidth / 2; // Half because we duplicate
+
+    const animate = () => {
+      if (!isPaused) {
+        if (direction === "right") {
+          currentTranslate -= speed / 60; // 60fps
+          if (Math.abs(currentTranslate) >= contentWidth) {
+            currentTranslate = 0;
+          }
+        } else if (direction === "left") {
+          currentTranslate += speed / 60;
+          if (currentTranslate >= 0) {
+            currentTranslate = -contentWidth;
+          }
+        }
+
+        scrollElement.style.transform = `translate3d(${currentTranslate}px, 0, 0)`;
+      }
+
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    // Start with proper initial position for left direction
+    if (direction === "left") {
+      currentTranslate = -contentWidth;
+      scrollElement.style.transform = `translate3d(${currentTranslate}px, 0, 0)`;
     }
-  }, [direction]);
 
-  // Memoize flex direction to prevent recalculation
-  const flexDirection = useMemo(() => {
-    switch (direction) {
-      case "up":
-      case "down":
-        return "flex-col";
-      default:
-        return "flex-row";
+    animationFrameId = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, [direction, speed, isPaused]);
+
+  const handleMouseEnter = () => {
+    if (pauseOnHover) {
+      setIsPaused(true);
     }
-  }, [direction]);
+  };
 
-  // Memoize animation style to prevent object recreation
-  const animationStyle = useMemo(
-    () => ({
-      animationDuration: `${speed}s`,
-      willChange: "transform", // Optimize for animations
-    }),
-    [speed]
-  );
-
-  // Memoize duplicated children to prevent unnecessary re-renders
-  const duplicatedChildren = useMemo(
-    () => (
-      <>
-        {children}
-        {children}
-      </>
-    ),
-    [children]
-  );
+  const handleMouseLeave = () => {
+    if (pauseOnHover) {
+      setIsPaused(false);
+    }
+  };
 
   return (
-    <div className={`group ${className}`}>
+    <div
+      className={`overflow-hidden ${className}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div
-        className={`${animationClass} ${flexDirection} flex gap-6 ${
-          pauseOnHover ? "group-hover:[animation-play-state:paused]" : ""
-        }`}
-        style={animationStyle}
+        ref={scrollRef}
+        className="flex gap-6"
+        style={{ willChange: "transform" }}
       >
-        {duplicatedChildren}
+        {/* First set */}
+        {childrenArray.map((child, index) => (
+          <React.Fragment key={`set1-${index}`}>{child}</React.Fragment>
+        ))}
+        {/* Duplicate set for seamless loop */}
+        {childrenArray.map((child, index) => (
+          <React.Fragment key={`set2-${index}`}>{child}</React.Fragment>
+        ))}
       </div>
     </div>
   );

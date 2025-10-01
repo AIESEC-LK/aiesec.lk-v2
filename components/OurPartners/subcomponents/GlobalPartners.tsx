@@ -13,31 +13,14 @@ const GlobalPartners = () => {
     };
   }, []);
 
-  // Memoize the partner cards to prevent unnecessary re-renders
-  const firstRowCards = useMemo(
-    () =>
-      firstList.map((partner, index) => (
-        <div
-          key={`first-${partner.name || index}`}
-          className="flex-shrink-0 w-48 h-32"
-        >
-          <GlobalPartnerCard partner={partner} />
-        </div>
-      )),
-    [firstList]
-  );
-
-  const secondRowCards = useMemo(
-    () =>
-      secondList.map((partner, index) => (
-        <div
-          key={`second-${partner.name || index}`}
-          className="flex-shrink-0 w-48 h-32"
-        >
-          <GlobalPartnerCard partner={partner} />
-        </div>
-      )),
-    [secondList]
+  // Render function for partner cards
+  const renderPartnerCard = (partner: any, index: number, prefix: string) => (
+    <div
+      key={`${prefix}-${partner.name || index}`}
+      className="flex-shrink-0 w-48 h-32"
+    >
+      <GlobalPartnerCard partner={partner} />
+    </div>
   );
 
   return (
@@ -49,13 +32,17 @@ const GlobalPartners = () => {
       {/* Horizontal infinite scroll */}
       <div className="space-y-8">
         {/* First Row - Scroll Right */}
-        <InfiniteScroll direction="right" speed={45} pauseOnHover={true}>
-          {firstRowCards}
+        <InfiniteScroll direction="right" speed={30} pauseOnHover={true}>
+          {firstList.map((partner, index) =>
+            renderPartnerCard(partner, index, "first")
+          )}
         </InfiniteScroll>
 
         {/* Second Row - Scroll Left */}
-        <InfiniteScroll direction="left" speed={45} pauseOnHover={true}>
-          {secondRowCards}
+        <InfiniteScroll direction="left" speed={30} pauseOnHover={true}>
+          {secondList.map((partner, index) =>
+            renderPartnerCard(partner, index, "second")
+          )}
         </InfiniteScroll>
       </div>
     </div>

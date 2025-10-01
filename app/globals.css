@@ -245,14 +245,10 @@ html {
 
 .animate-scroll-right {
   animation: scroll-right 30s linear infinite;
-  backface-visibility: hidden;
-  perspective: 1000px;
 }
 
 .animate-scroll-left {
   animation: scroll-left 30s linear infinite;
-  backface-visibility: hidden;
-  perspective: 1000px;
 }
 
 .group:hover .animate-scroll-right,
