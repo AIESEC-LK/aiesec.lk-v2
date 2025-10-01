@@ -1,34 +1,40 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import Image from "next/image"
-import { entities, entitiesHeader, entitiesSubheader, entitiesCtaText, entitiesCtaLink } from "../constants/entities"
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import {
+  entities,
+  entitiesHeader,
+  entitiesSubheader,
+  entitiesCtaText,
+  entitiesCtaLink,
+} from "../constants/entities";
 
 export function Entities() {
-  const gridRef = useRef<HTMLDivElement>(null)
+  const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-scale-in")
+            entry.target.classList.add("animate-scale-in");
           }
-        })
+        });
       },
-      { threshold: 0.1 },
-    )
+      { threshold: 0.1 }
+    );
 
     if (gridRef.current) {
-      const children = gridRef.current.children
+      const children = gridRef.current.children;
       Array.from(children).forEach((child, index) => {
-        ;(child as HTMLElement).style.animationDelay = `${index * 0.05}s`
-        observer.observe(child)
-      })
+        (child as HTMLElement).style.animationDelay = `${index * 0.05}s`;
+        observer.observe(child);
+      });
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="entities" className="py-32 bg-white">
@@ -57,18 +63,25 @@ export function Entities() {
                   className="object-contain"
                 />
               </div>
-              <div className="text-sm text-gray-900 font-normal text-center">{entity.name}</div>
+              <div className="text-sm text-gray-900 font-normal text-center">
+                {entity.name}
+              </div>
             </div>
           ))}
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-lg text-gray-600 mb-4 font-light">{entitiesCtaText}</p>
-          <a href="#contact" className="inline-flex items-center text-gray-900 hover:text-gray-600 font-normal text-lg">
+          <p className="text-lg text-gray-600 mb-4 font-light">
+            {entitiesCtaText}
+          </p>
+          <a
+            href="#contact"
+            className="inline-flex items-center text-gray-900 hover:text-gray-600 font-normal text-lg"
+          >
             {entitiesCtaLink}
           </a>
         </div>
       </div>
     </section>
-  )
+  );
 }
