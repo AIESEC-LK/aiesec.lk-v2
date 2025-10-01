@@ -41,15 +41,18 @@ export function Entities() {
     <section id="entities" className="py-32 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-24">
-          <h2 className="text-5xl md:text-7xl font-light leading-tight text-balance mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-light leading-tight text-balance mb-8">
             {entitiesHeader}
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light text-pretty">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed font-light text-pretty">
             {entitiesSubheader}
           </p>
         </div>
 
-        <div ref={gridRef} className="grid grid-cols-8 gap-6 max-w-7xl mx-auto">
+        <div
+          ref={gridRef}
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-8 gap-6 max-w-7xl mx-auto"
+        >
           {entities.map((entity, index) => (
             <Card
               key={index}
