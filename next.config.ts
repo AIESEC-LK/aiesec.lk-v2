@@ -10,6 +10,7 @@ const nextConfig = {
   // Optimize images
   images: {
     formats: ["image/webp", "image/avif"],
+    domains: ['aiesec.lk'],
     minimumCacheTTL: 60,
   },
 };

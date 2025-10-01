@@ -4,15 +4,18 @@ import FAQ from "@/components/FAQ/FAQ";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import OurStory from "@/components/OurStory";
+import {Navigation} from "@/components/Navigation/Navigation";
 
 import { Entities } from "@/components/Entities";
+
 export default function Home() {
   return (
 
 
 
     <div >
-        <OurStory />
+      <Navigation />
+      <OurStory />
       <Entities />
       <OurPartners />
       <FAQ />
