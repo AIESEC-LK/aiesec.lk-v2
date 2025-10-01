@@ -1,14 +1,24 @@
-import { Entities } from "@/components/Entities";
-import OurStory from "@/components/OurStory";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
+import OurPartners from "@/components/OurPartners/OurPartners";
+import FAQ from "@/components/FAQ/FAQ";
+import Contact from "@/components/Contact/Contact";
+import Footer from "@/components/Footer/Footer";
+import OurStory from "@/components/OurStory";
+
+import { Entities } from "@/components/Entities";
 export default function Home() {
   return (
-    <div>
-      <OurStory />
 
+
+
+    <div >
+        <OurStory />
       <Entities />
+      <OurPartners />
+      <FAQ />
+      <Contact />
+      <Footer />
+
     </div>
   );
 }
