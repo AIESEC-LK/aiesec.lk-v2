@@ -54,13 +54,17 @@ export function Entities() {
               key={index}
               className="bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-all group cursor-pointer flex flex-col items-center"
             >
-              <div className="w-20 h-20 mb-3 flex items-center justify-center">
+              <div
+                className="w-28 h-28 mb-3 flex items-center justify-center rounded-lg p-3"
+                style={{ minHeight: 112 }}
+              >
                 <Image
                   src={entity.logo || "/placeholder.svg"}
                   alt={entity.name}
-                  width={80}
-                  height={80}
-                  className="object-contain"
+                  width={96}
+                  height={96}
+                  className="object-contain max-h-24 max-w-24"
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <div className="text-sm text-gray-900 font-normal text-center">
