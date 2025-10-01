@@ -10,7 +10,7 @@ import FAQItem from "./subcomponents/FAQItem";
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-24 bg-card/30 bg-gray-100">
+    <section id="faq" className="py-24 bg-card/30 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
