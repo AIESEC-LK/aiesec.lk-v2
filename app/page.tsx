@@ -7,10 +7,12 @@ import OurStory from "@/components/OurStory/OurStory";
 import { Entities } from "@/components/Entities/Entities";
 import { OpportunitiesForPartners } from "@/components/OpportunitiesForPartners/OpportunitiesForPartners";
 import Navigation from "@/components/Navigation/Navigation";
+import { Hero } from "@/components/Hero/Hero";
 export default function Home() {
   return (
     <div>
       <Navigation />
+      <Hero />
       <OurStory />
       <Entities />
       <OpportunitiesForPartners />
