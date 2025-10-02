@@ -1,7 +1,6 @@
 import React from "react";
 import { PartnerPopoverProps } from "@/types/partner";
 
-
 const PartnerPopover = ({ partner, isOpen, onClose }: PartnerPopoverProps) => {
   if (!isOpen) return null;
 
