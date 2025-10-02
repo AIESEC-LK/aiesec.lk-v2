@@ -28,13 +28,13 @@ export function Hero() {
   }, [])
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 w-full h-full">
+    <section id="home" className="relative border-b-5  border-blue-500 min-h-screen flex items-center justify-center overflow-hidden ">
+      <div className="absolute inset-0 w-full h-full ">
         <iframe
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          className="absolute inset-0 w-full h-full object-fill  pointer-events-none "
           style={{
             width: "100vw",
-            height: "100vh",
+            height: "150vh",
             transform: "scale(1.5)",
             opacity: 0.5,
           }}
@@ -65,17 +65,17 @@ export function Hero() {
             <span className="font-normal">That Transforms</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto font-light text-pretty">
+          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-6xl mx-auto font-light text-pretty">
             AIESEC empowers young people to explore their potential through international exchanges and volunteer
             opportunities across 110+ countries.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center ">
             
             
           </div>
 
-          <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 max-w-4xl mx-auto">
+          <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-42 max-w-4xl mx-auto">
             <div className="space-y-2">
               <div className="text-5xl md:text-6xl font-light text-gray-900">500+</div>
               <div className="text-sm text-gray-500 font-light">Active Members</div>
@@ -96,11 +96,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-1.5 bg-gray-400 rounded-full" />
-        </div>
-      </div>
+      
     </section>
   )
 }
