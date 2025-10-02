@@ -6,15 +6,19 @@ import OurStory from "@/components/OurStory/OurStory";
 
 import { Entities } from "@/components/Entities/Entities";
 import { OpportunitiesForPartners } from "@/components/OpportunitiesForPartners/OpportunitiesForPartners";
+import Navigation from "@/components/Navigation/Navigation";
 export default function Home() {
   return (
     <div>
+      <Navigation />
       <OurStory />
       <Entities />
       <OpportunitiesForPartners />
       <OurPartners />
       <FAQ />
       <Contact />
+
+      
       <Footer />
     </div>
   );
