@@ -54,7 +54,7 @@ export function Hero() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-32 pb-20">
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
           <div className="inline-block">
-            <div className="bg-white/70 backdrop-blur-sm text-gray-800 px-5 py-2 rounded-full text-sm font-medium shadow-sm">
+            <div className="bg-white/70 backdrop-blur-sm text-gray-800 px-5 py-2.5 rounded-full text-sm font-medium shadow-sm flex items-center justify-center min-h-[2.5rem]">
               Celebrating 30 Years in Sri Lanka
             </div>
           </div>
@@ -93,12 +93,6 @@ export function Hero() {
               <div className="text-sm text-gray-500 font-light">Years</div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-1.5 bg-gray-400 rounded-full" />
         </div>
       </div>
     </section>

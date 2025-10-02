@@ -8,11 +8,13 @@ import { Entities } from "@/components/Entities/Entities";
 import { OpportunitiesForPartners } from "@/components/OpportunitiesForPartners/OpportunitiesForPartners";
 import Navigation from "@/components/Navigation/Navigation";
 import { Hero } from "@/components/Hero/Hero";
+import { About } from "@/components/About/About";
 export default function Home() {
   return (
     <div>
       <Navigation />
       <Hero />
+      <About />
       <OurStory />
       <Entities />
       <OpportunitiesForPartners />

@@ -10,7 +10,7 @@ const nextConfig = {
   // Optimize images
   images: {
     formats: ["image/webp", "image/avif"],
-    domains: ['aiesec.lk'],
+    domains: ['aiesec.lk', 'www.logos.aiesec.org', 'aiesec-logos.s3.eu-west-1.amazonaws.com'],
     minimumCacheTTL: 60,
   },
 };
