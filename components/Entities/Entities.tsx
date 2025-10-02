@@ -11,7 +11,7 @@ import { EntitiesGrid } from "./subcomponents/EntitiesGrid";
 
 export function Entities() {
   return (
-    <section id="entities" className="py-62 bg-whitee ">
+    <section id="entities" className=" bg-whitee ">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 text-balance">

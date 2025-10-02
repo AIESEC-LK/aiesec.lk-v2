@@ -22,7 +22,7 @@ export default function Home() {
       </div>
 
 
-      <div className=" ">
+      <div className=" mt-[475px] sm:mt-[300px] lg:mt-[250px]">
         <Entities />
       </div>
 
