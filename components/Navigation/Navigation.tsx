@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import Image from "next/image"
 
 export function Navigation() {
@@ -99,15 +99,6 @@ export function Navigation() {
           </div>
         )}
       </div>
-
-      {!isScrolled && (
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full py-4 animate-bounce">
-          <div className="flex flex-col items-center gap-2 text-gray-400">
-            <span className="text-xs font-light">Scroll to explore</span>
-            <ChevronDown size={20} />
-          </div>
-        </div>
-      )}
     </nav>
   )
 }
