@@ -7,8 +7,12 @@ import {
 
 export default function OurStoryCard() {
   return (
-    <div className="relative border border-muted rounded-2xl bg-background/80 shadow-sm px-2 sm:px-6 py-6 sm:py-10 max-w-5xl w-full mx-auto text-center mb-16 overflow-hidden">
+    <div className="z-10 -top-50 left-1/2 -translate-x-1/2 bg-white absolute border-5 border-blue-500 rounded-2xl shadow-sm max-w-5xl w-full text-center overflow-hidden">
       {/* LiquidEther as background */}
+
+      <div className="relative px-2 sm:px-6 py-6 sm:py-10">
+
+   
       <div className="absolute inset-0 w-full h-full z-11 opacity-40">
         <LiquidEther
           colors={["#0CB9C1", "#7552CC", "#037EF3"]}
@@ -45,6 +49,6 @@ export default function OurStoryCard() {
           ))}
         </div>
       </div>
-    </div>
+    </div>   </div>
   );
 }

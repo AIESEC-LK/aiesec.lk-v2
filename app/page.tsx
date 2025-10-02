@@ -10,17 +10,28 @@ import Navigation from "@/components/Navigation/Navigation";
 import { Hero } from "@/components/Hero/Hero";
 export default function Home() {
   return (
-    <div>
+    <div >
       <Navigation />
       <Hero />
-      <OurStory />
-      <Entities />
+      <div className="relative">
+
+     
+
+          <OurStory />
+       
+      </div>
+
+
+      <div className=" ">
+        <Entities />
+      </div>
+
       <OpportunitiesForPartners />
       <OurPartners />
       <FAQ />
       <Contact />
 
-      
+
       <Footer />
     </div>
   );
