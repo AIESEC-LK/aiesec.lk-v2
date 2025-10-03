@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 
 export function Hero() {
   const statsRef = useRef<HTMLDivElement>(null)
@@ -90,9 +91,14 @@ export function Hero() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-32 pb-20">
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
           <div className="inline-block">
-            <div className="bg-white/70 backdrop-blur-sm text-gray-800 px-5 py-2.5 rounded-full text-sm font-medium shadow-sm flex items-center justify-center min-h-[2.5rem]">
-              Celebrating 30 Years in Sri Lanka
-            </div>
+            <Image 
+              src="/images/hero/30 Years Logo.png"
+              alt="AIESEC Sri Lanka 30 Years"
+              width={80}
+              height={40}
+              className="object-contain hover:scale-110 transition-transform duration-300"
+              priority
+            />
           </div>
 
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-light leading-[0.95] text-balance tracking-tight">
