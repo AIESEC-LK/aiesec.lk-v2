@@ -11,10 +11,9 @@ import { Hero } from "@/components/Hero/Hero";
 import { About } from "@/components/About/About";
 export default function Home() {
   return (
-    <div>
+    <div >
       <Navigation />
       <Hero />
-      <About />
       <OurStory />
       <Entities />
       <OpportunitiesForPartners />
@@ -22,7 +21,7 @@ export default function Home() {
       <FAQ />
       <Contact />
 
-      
+
       <Footer />
     </div>
   );
