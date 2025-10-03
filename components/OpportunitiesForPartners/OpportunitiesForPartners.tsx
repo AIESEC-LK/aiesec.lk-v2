@@ -15,7 +15,13 @@ export function OpportunitiesForPartners() {
     <SpotlightWrapper spotlightColor={spotlightColor}>
       <section
         id="partner-opportunities"
-        className="py-24 md:py-32 bg-transparent"
+        className="  bg-transparent "
+        style={{
+          backgroundImage: "url('/images/story/sri-lanka-line-image.avif')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
@@ -52,8 +58,8 @@ export function OpportunitiesForPartners() {
               <div className="text-center">
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border-gray-900 text-gray-900 hover:bg-gray-900 bg-white rounded-lg h-12 px-8 font-normal"
+                  variant="default"
+                  className="cursor-pointer hover:scale-110 transition-all duration-300 bg-blue-500 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl rounded-lg h-14 px-10 border-2 border-blue-600 hover:border-blue-500 text-xl"
                 >
                   Become a Partner
                 </Button>

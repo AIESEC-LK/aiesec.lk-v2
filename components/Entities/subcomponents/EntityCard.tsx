@@ -7,7 +7,7 @@ export function EntityCard({
   entity: { name: string; logo: string };
 }) {
   return (
-    <Card className="bg-gray-50 rounded-xl hover:bg-gray-100 transition-all group cursor-pointer flex flex-col items-center border-0 shadow-none">
+    <Card className=" rounded-xl  transition-all group cursor-pointer flex flex-col items-center border-0 shadow-none">
       <CardContent className="flex flex-col items-center p-4">
         <div
           className="w-28 h-28 mb-3 flex items-center justify-center rounded-lg p-3"

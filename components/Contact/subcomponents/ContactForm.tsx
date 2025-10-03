@@ -4,8 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ContactFormData } from "@/types/contact";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactForm = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
@@ -14,13 +16,26 @@ const ContactForm = () => {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
-    // TODO: Send form data to server
     e.preventDefault();
-    console.log(formData);
+
+    // Show success toast
+    toast({
+      title: "Message sent successfully!",
+      description: "Thank you for reaching out. We'll get back to you soon.",
+      variant: "success",
+    });
+
+    // Clear the form
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
   };
 
   return (
-    <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
+    <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl w-full">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label
@@ -103,7 +118,7 @@ const ContactForm = () => {
         <Button
           type="submit"
           size="lg"
-          className="w-full bg-primary hover:bg-primary/90"
+          className="w-full bg-primary hover:bg-primary/70 cursor-pointer "
         >
           Send Message
         </Button>
