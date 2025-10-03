@@ -2,10 +2,27 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export function Hero() {
   const statsRef = useRef<HTMLDivElement>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    // Check if window width is less than 768px
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    // Initial check
+    checkMobile()
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkMobile)
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,10 +45,13 @@ export function Hero() {
   }, [])
 
   return (
-    <section id="home" className="relative border-b-5  border-blue-500 min-h-screen flex items-center justify-center overflow-hidden ">
-      <div className="absolute inset-0 w-full h-full ">
+    <section id="home" className="relative border-b-5 border-blue-500 min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 w-full h-full">
+        {/* Desktop Video */}
         <iframe
-          className="absolute inset-0 w-full h-full object-fill  pointer-events-none "
+          className={`absolute inset-0 w-full h-full object-fill pointer-events-none ${
+            isMobile ? 'hidden' : 'block'
+          }`}
           style={{
             width: "100vw",
             height: "150vh",
@@ -39,7 +59,23 @@ export function Hero() {
             opacity: 0.5,
           }}
           src="https://www.youtube.com/embed/2BcA4ECWiT8?autoplay=1&mute=1&loop=1&playlist=2BcA4ECWiT8&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-          title="Background video"
+          title="Background video desktop"
+          allow="autoplay; encrypted-media"
+        />
+
+        {/* Mobile Video */}
+        <iframe
+          className={`absolute inset-0 w-full h-full object-fill pointer-events-none ${
+            isMobile ? 'block' : 'hidden'
+          }`}
+          style={{
+            width: "100vw",
+            height: "150vh",
+            transform: "scale(1.5)",
+            opacity: 0.5,
+          }}
+          src="https://www.youtube.com/embed/v7sL8O33foo?autoplay=1&mute=1&loop=1&playlist=v7sL8O33foo&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+          title="Background video mobile"
           allow="autoplay; encrypted-media"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60" />
