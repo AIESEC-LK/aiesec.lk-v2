@@ -28,19 +28,12 @@ export const nationalPartners: Partner[] = [
   {
     name: "Unilever",
     logo: "/images/partners/Unilever - National Partner.avif",
-    category: "National Talent Partner",
+    category: "National Partner",
     description: "Unilever is a leading technology company in Sri Lanka.",
   },
 ];
 
 export const globalPartners: Partner[] = [
-  {
-    name: "United Nations",
-    logo: "/images/partners/United Nations - Global Partner.avif",
-    category: "Global Affiliation",
-    description:
-      "Leading international organization promoting peace and cooperation.",
-  },
   {
     name: "Alfa Laval",
     logo: "/images/partners/Alfa Laval - Global Partner.avif",
@@ -79,10 +72,10 @@ export const globalPartners: Partner[] = [
     description: "Global leader in adhesive technologies.",
   },
   {
-    name: "Husqvarna",
-    logo: "/images/partners/Husqvarna - Global Partner.avif",
+    name: "Accenture",
+    logo: "/images/partners/accenture.png",
     category: "Global Affiliation",
-    description: "World leader in outdoor power products.",
+    description: "A multinational professional services company.",
   },
   {
     name: "International SOS",
@@ -109,12 +102,6 @@ export const globalPartners: Partner[] = [
     description: "One of the world's largest professional services networks.",
   },
   {
-    name: "Quantum Lead",
-    logo: "/images/partners/Quantum Lead - Global Partner.avif",
-    category: "Global Affiliation",
-    description: "Leading global consulting firm.",
-  },
-  {
     name: "Schneider",
     logo: "/images/partners/Schneider - Global Partner.avif",
     category: "Global Affiliation",
@@ -133,9 +120,80 @@ export const globalPartners: Partner[] = [
     description: "Renewable energy solutions provider.",
   },
   {
-    name: "UNDP",
-    logo: "/images/partners/UNDP - Global Partner.avif",
+    name: "Electrolux Professional",
+    logo: "/images/partners/electrolux professional.png",
     category: "Global Affiliation",
-    description: "United Nations Development Programme.",
+    description:
+      ".",
+  },
+   {
+    name: "EY",
+    logo: "/images/partners/ey.png",
+    category: "Global Affiliation",
+    description:
+      ".",
+  },
+   {
+    name: "HKTE",
+    logo: "/images/partners/hkte.png",
+    category: "Global Affiliation",
+    description:
+      ".",
+  },
+   {
+    name: "IE University",
+    logo: "/images/partners/ie University.png",
+    category: "Global Affiliation",
+    description:
+      ".",
+  },
+  {
+    name: "International Labour Organization",
+    logo: "/images/partners/ILO.png",
+    category: "Global Affiliation",
+    description:
+      ".",
+  },
+  {
+    name: "InfoSys",
+    logo: "/images/partners/infosys.png",
+    category: "Global Affiliation",
+    description:
+      ".",
+  },
+  {
+    name: "Project Everyone",
+    logo: "/images/partners/project everyone.png",
+    category: "Global Affiliation",
+    description:
+      ".",
+  },
+  {
+    name: "SAP",
+    logo: "/images/partners/sap.png",
+    category: "Global Affiliation",
+    description:
+      ".",
+  },
+  {
+    name: "Sensei",
+    logo: "/images/partners/Sensei.png",
+    category: "Global Affiliation",
+    description:
+      ".",
+  },
+  {
+    name: "SLB",
+    logo: "/images/partners/slb.jpg",
+    category: "Global Affiliation",
+    description:
+      ".",
+  },
+  {
+    name: "TOYOTA TSUSHO ",
+    logo: "/images/partners/toyota.jpg",
+    category: "Global Affiliation",
+    description:
+      ".",
   },
 ];
