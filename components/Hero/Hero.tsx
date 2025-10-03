@@ -56,7 +56,7 @@ export function Hero() {
           style={{
             width: "100vw",
             height: "150vh",
-            transform: "scale(1.5)",
+            transform: "scale(1.8)",
             opacity: 0.5,
           }}
           src="https://www.youtube.com/embed/2BcA4ECWiT8?autoplay=1&mute=1&loop=1&playlist=2BcA4ECWiT8&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
@@ -72,7 +72,7 @@ export function Hero() {
           style={{
             width: "100vw",
             height: "150vh",
-            transform: "scale(1.5)",
+            transform: "scale(2)",
             opacity: 0.5,
           }}
           src="https://www.youtube.com/embed/v7sL8O33foo?autoplay=1&mute=1&loop=1&playlist=v7sL8O33foo&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
