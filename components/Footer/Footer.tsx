@@ -14,13 +14,13 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="bg-gradient-to-br from-gray-50 via-white to-gray-50 border-t border-gray-200"
+      className="bg-gradient-to-br from-gray-50 via-white to-gray-50 border-t  border-gray-200"
     >
       <div className="container mx-auto px-6 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="flex flex-col  lg:flex-row justify-between gap-12 mb-12  ">
           {/* Brand Section */}
-          <div className="space-y-4">
+          <div className="space-y-4   max-w-fit">
             <img
               src="/images/footer/Aiesec-Black-Logo.avif"
               alt="AIESEC"
@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="  max-w-fit">
             <h3 className="text-base font-bold text-foreground mb-4">
               Quick Links
             </h3>
@@ -81,7 +81,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Information */}
-          <div>
+          <div className=" max-w-fit">
             <h3 className="text-base font-bold text-foreground mb-4">
               Contact Us
             </h3>
@@ -111,30 +111,16 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Call to Action */}
-          <div>
-            <h3 className="text-base font-bold text-foreground mb-4">
-              {footer.callToAction.title}
-            </h3>
-            <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              {footer.callToAction.description}
-            </p>
-            <Link
-              href={footer.callToAction.buttonLink}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/90 hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm font-semibold"
-            >
-              {footer.callToAction.buttonText}
-            </Link>
-          </div>
+          
         </div>
 
         {/* Divider */}
         <div className="border-t border-gray-200"></div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>{footer.rights}</p>
-          <p className="flex items-center gap-1">{footer.developer}</p>
+        <div className="pt-8  flex flex-col justify-center items-center  text-sm text-muted-foreground">
+
+          <p className="flex items-center hover:scale-120 transition-transform duration-300 cursor-pointer">{footer.developer}</p>
         </div>
       </div>
     </footer>

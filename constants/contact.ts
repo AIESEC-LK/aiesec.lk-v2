@@ -2,8 +2,8 @@ import { ContactInfo } from "@/types/contact";
 
 export const contactInfo : ContactInfo = {
   email: "info@aiesec.lk",
-  phone: "+94 71 234 5678",
-  address: "123 Main St, Colombo, Sri Lanka",
+  phone: "+94 112 746 190",
+  address: "102/2 , Nagahawatta Road, Maharagama, 10280",
   socialMedia: {
     facebook: "https://www.facebook.com/aiesec.lk",
     instagram: "https://www.instagram.com/aiesec.lk",

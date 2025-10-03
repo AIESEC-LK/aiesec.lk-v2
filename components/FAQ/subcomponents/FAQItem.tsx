@@ -10,12 +10,12 @@ const FAQItem = ({ faq, index }: FAQItemProps) => {
   return (
     <AccordionItem
       value={`item-${index}`}
-      className="bg-card border border-border rounded-lg px-6 data-[state=open]:border-primary/50"
+      className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 shadow-lg data-[state=open]:border-primary/50"
     >
-      <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:text-primary">
+      <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-white hover:no-underline cursor-pointer">
         {faq.question}
       </AccordionTrigger>
-      <AccordionContent className="text-muted-foreground leading-relaxed">
+      <AccordionContent className="text-gray-300 leading-relaxed">
         {faq.answer}
       </AccordionContent>
     </AccordionItem>

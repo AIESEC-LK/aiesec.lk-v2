@@ -2,7 +2,7 @@ export const footer = {
   title: "AIESEC in Sri Lanka",
   description: "Empowering youth leadership since 1995",
   rights: "© 2025 AIESEC in Sri Lanka. All rights reserved.",
-  developer: "Made with ❤ by AIESEC </Dev.Team>",
+  developer: "Made with Love 💗 by </Dev.Team > of AIESEC in Sri Lanka",
   callToAction: {
     title: "Get Involved",
     description:
