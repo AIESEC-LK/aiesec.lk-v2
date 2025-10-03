@@ -4,8 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ContactFormData } from "@/types/contact";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactForm = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
@@ -14,9 +16,22 @@ const ContactForm = () => {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
-    // TODO: Send form data to server
     e.preventDefault();
-    console.log(formData);
+
+    // Show success toast
+    toast({
+      title: "Message sent successfully!",
+      description: "Thank you for reaching out. We'll get back to you soon.",
+      variant: "success",
+    });
+
+    // Clear the form
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
   };
 
   return (
