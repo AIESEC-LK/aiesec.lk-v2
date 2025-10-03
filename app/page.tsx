@@ -9,6 +9,7 @@ import { ExploreOpportunities } from "@/components/ExploreOpportunities/ExploreO
 import { OpportunitiesForPartners } from "@/components/OpportunitiesForPartners/OpportunitiesForPartners";
 import Navigation from "@/components/Navigation/Navigation";
 import { Hero } from "@/components/Hero/Hero";
+import { About } from "@/components/About/About";
 export default function Home() {
   return (
     <div >
