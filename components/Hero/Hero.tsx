@@ -2,10 +2,28 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 
 export function Hero() {
   const statsRef = useRef<HTMLDivElement>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    // Check if window width is less than 768px
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    // Initial check
+    checkMobile()
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkMobile)
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,18 +46,37 @@ export function Hero() {
   }, [])
 
   return (
-    <section id="home" className="relative border-b-5  border-blue-500 min-h-screen flex items-center justify-center overflow-hidden ">
-      <div className="absolute inset-0 w-full h-full ">
+    <section id="home" className="relative border-b-5 border-blue-500 min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 w-full h-full">
+        {/* Desktop Video */}
         <iframe
-          className="absolute inset-0 w-full h-full object-fill  pointer-events-none "
+          className={`absolute inset-0 w-full h-full object-fill pointer-events-none ${
+            isMobile ? 'hidden' : 'block'
+          }`}
           style={{
             width: "100vw",
             height: "150vh",
-            transform: "scale(1.5)",
+            transform: "scale(1.8)",
             opacity: 0.5,
           }}
           src="https://www.youtube.com/embed/2BcA4ECWiT8?autoplay=1&mute=1&loop=1&playlist=2BcA4ECWiT8&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-          title="Background video"
+          title="Background video desktop"
+          allow="autoplay; encrypted-media"
+        />
+
+        {/* Mobile Video */}
+        <iframe
+          className={`absolute inset-0 w-full h-full object-fill pointer-events-none ${
+            isMobile ? 'block' : 'hidden'
+          }`}
+          style={{
+            width: "100vw",
+            height: "150vh",
+            transform: "scale(2)",
+            opacity: 0.5,
+          }}
+          src="https://www.youtube.com/embed/v7sL8O33foo?autoplay=1&mute=1&loop=1&playlist=v7sL8O33foo&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+          title="Background video mobile"
           allow="autoplay; encrypted-media"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60" />
@@ -54,9 +91,14 @@ export function Hero() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-32 pb-20">
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
           <div className="inline-block">
-            <div className="bg-white/70 backdrop-blur-sm text-gray-800 px-5 py-2 rounded-full text-sm font-medium shadow-sm">
-              Celebrating 30 Years in Sri Lanka
-            </div>
+            <Image 
+              src="/images/hero/30 Years Logo.png"
+              alt="AIESEC Sri Lanka 30 Years"
+              width={80}
+              height={40}
+              className="object-contain hover:scale-110 transition-transform duration-300"
+              priority
+            />
           </div>
 
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-light leading-[0.95] text-balance tracking-tight">
@@ -96,7 +138,11 @@ export function Hero() {
         </div>
       </div>
 
-      
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex items-start justify-center p-2">
+          <div className="w-1.5 h-1.5 bg-gray-400 rounded-full" />
+        </div>
+      </div>
     </section>
   )
 }

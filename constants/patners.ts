@@ -2,10 +2,10 @@ import { Partner } from "@/types/partner";
 
 export const nationalPartners: Partner[] = [
   {
-    name: "EFL Global",
-    logo: "/images/partners/EFL Global Sri Lanka - National Partner.avif",
+    name: "MAS",
+    logo: "/images/partners/MAS - National Partner.png",
     category: "National Partner",
-    description: "EFL Global is a leading global company in Sri Lanka.",
+    description: "MAS Global is a leading global company in Sri Lanka.",
   },
   {
     name: "DIMO",
@@ -14,10 +14,10 @@ export const nationalPartners: Partner[] = [
     description: "DIMO is a leading technology company in Sri Lanka.",
   },
   {
-    name: "Innovate",
-    logo: "/images/partners/Innovate - National Partner.avif",
+    name: "RIDE",
+    logo: "/images/partners/Ride - National Partner.png",
     category: "National Partner",
-    description: "Inovate is a leading technology company in Sri Lanka.",
+    description: "RIDE is a leading energy drink in Sri Lanka.",
   },
   {
     name: "Emarald",
@@ -31,6 +31,37 @@ export const nationalPartners: Partner[] = [
     category: "National Talent Partner",
     description: "Unilever is a leading technology company in Sri Lanka.",
   },
+  {
+    name: "e-wis",
+    logo: "/images/partners/e-wis - National Partner.png",
+    category: "National Partner",
+    description: "e-wis is a leading technology company in Sri Lanka.",
+  },
+  {
+    name: "Ceylinco Life",
+    logo: "/images/partners/Ceylinco Life - National Partner.png",
+    category: "National Talent Partner",
+    description: "Ceylinco Life is Sri Lanka's market leader in life insurance",
+  },
+  {
+    name: "Nestle",
+    logo: "/images/partners/Nestle - National Partner.png",
+    category: "National Talent Partner",
+    description: "Nestle is the world's largest food company",
+  },
+  {
+    name: "ADVANTIS",
+    logo: "/images/partners/Advantis - National Partner.png",
+    category: "National Talent Partner",
+    description: "Advantis is a leading logistics company in Sri Lanka.",
+  },
+  {
+    name: "Right to Protein",
+    logo: "/images/partners/Right to protein - National Partner.png",
+    category: "National Talent Partner",
+    description: "Right To Protein is an awareness initiative to educate people about the importance of adequate protein consumption.",
+  },
+
 ];
 
 export const globalPartners: Partner[] = [
