@@ -22,17 +22,7 @@ export function Entities() {
           </p>
         </div>
         <EntitiesGrid entities={entities} />
-        <div className="mt-16 text-center">
-          <p className="text-lg text-gray-600 mb-4 font-light">
-            {entitiesCtaText}
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center text-gray-900 hover:text-gray-600 font-normal text-lg"
-          >
-            {entitiesCtaLink}
-          </a>
-        </div>
+        
       </div>
     </section>
   );

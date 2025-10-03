@@ -35,7 +35,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
+    <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl w-full">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label
@@ -118,7 +118,7 @@ const ContactForm = () => {
         <Button
           type="submit"
           size="lg"
-          className="w-full bg-primary hover:bg-primary/90"
+          className="w-full bg-primary hover:bg-primary/70 cursor-pointer "
         >
           Send Message
         </Button>

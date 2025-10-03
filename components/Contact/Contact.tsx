@@ -25,8 +25,8 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <ContactInfo />
+        <div className="flex max-w-3xl  mx-auto ">
+       
           <ContactForm />
         </div>
       </div>

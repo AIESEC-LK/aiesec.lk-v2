@@ -15,7 +15,7 @@ export function OpportunitiesForPartners() {
     <SpotlightWrapper spotlightColor={spotlightColor}>
       <section
         id="partner-opportunities"
-        className="py-24 md:py-32 bg-transparent"
+        className="  bg-transparent "
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
@@ -53,7 +53,7 @@ export function OpportunitiesForPartners() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-gray-900 text-gray-900 hover:bg-gray-900 bg-white rounded-lg h-12 px-8 font-normal"
+                  className="cursor-pointer hover:scale-125 hover:border-2 border-blue-500 hover:border-blue-500 text-gray-900 hover:bg-gray-900 bg-white rounded-lg h-12 px-8 font-normal"
                 >
                   Become a Partner
                 </Button>
