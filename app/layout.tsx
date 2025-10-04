@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     "Celebrating 30 years of developing youth leadership in Sri Lanka. Join AIESEC for global volunteer, talent, and teaching opportunities. Empowering young people since 1995.",
   keywords:
     "AIESEC Sri Lanka, youth leadership, global volunteer Sri Lanka, foreign talent Sri Lanka, youth volunteering Sri Lanka, international internships, student exchange programs",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
