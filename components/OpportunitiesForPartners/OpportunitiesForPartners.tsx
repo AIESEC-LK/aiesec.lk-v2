@@ -7,6 +7,7 @@ import {
   PARTNER_OPPORTUNITIES_DESCRIPTION,
   PARTNER_OPPORTUNITIES,
 } from "@/constants/opportunitiesForPartners";
+import Link from "next/link";
 
 export function OpportunitiesForPartners() {
   // #037EF3 => rgb(3, 126, 243), use alpha 0.25 for subtle effect
@@ -56,13 +57,15 @@ export function OpportunitiesForPartners() {
                 ))}
               </div>
               <div className="text-center">
-                <Button
-                  size="lg"
-                  variant="default"
-                  className="cursor-pointer hover:scale-110 transition-all duration-300 bg-blue-500 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl rounded-lg h-14 px-10 border-2 border-blue-600 hover:border-blue-500 text-xl"
-                >
-                  Become a Partner
-                </Button>
+                <Link href="/partner-portal">
+                  <Button
+                    size="lg"
+                    variant="default"
+                    className="cursor-pointer hover:scale-110 transition-all duration-300 bg-blue-500 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl rounded-lg h-14 px-10 border-2 border-blue-600 hover:border-blue-500 text-xl"
+                  >
+                    Become a Partner
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
