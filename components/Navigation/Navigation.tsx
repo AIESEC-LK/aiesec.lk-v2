@@ -18,9 +18,8 @@ export function Navigation() {
   }, [])
 
   const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#opportunities", label: "Opportunities" },
+    { href: "/", label: "Home" },
+    { href: "#explore-opportunities", label: "Opportunities" },
     { href: "#partners", label: "Partners" },
     { href: "#contact", label: "Contact" },
   ]
@@ -33,7 +32,7 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <a href="#home" className="flex items-center relative z-10">
+          <a href="/" className="flex items-center relative z-10">
             <Image
               src="https://aiesec.lk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbluelogo.11776f2a.png&w=384&q=75"
               alt="AIESEC Sri Lanka"
