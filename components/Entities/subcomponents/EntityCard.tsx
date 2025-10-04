@@ -7,8 +7,8 @@ export function EntityCard({
   entity: { name: string; logo: string };
 }) {
   return (
-    <Card className=" rounded-xl  transition-all group cursor-pointer flex flex-col items-center border-0 shadow-none">
-      <CardContent className="flex flex-col items-center p-4">
+    <Card className=" rounded-xl  transition-all group cursor-pointer flex flex-col items-center border-0 shadow-none bg-transparent">
+      <CardContent className="flex flex-col items-center p-4 bg-transparent">
         <div
           className="w-28 h-28 mb-3 flex items-center justify-center rounded-lg p-3"
           style={{ minHeight: 112 }}
