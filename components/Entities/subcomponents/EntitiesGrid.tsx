@@ -32,13 +32,15 @@ export function EntitiesGrid({
   }, []);
 
   return (
-    <div
-      ref={gridRef}
-      className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-8 gap-6 max-w-7xl mx-auto bg-transparent"
-    >
-      {entities.map((entity, index) => (
-        <EntityCard key={index} entity={entity} />
-      ))}
+    <div className="w-full flex justify-center">
+      <div
+        ref={gridRef}
+        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-8 gap-6 max-w-7xl bg-transparent items-center justify-items-center"
+      >
+        {entities.map((entity, index) => (
+          <EntityCard key={index} entity={entity} />
+        ))}
+      </div>
     </div>
   );
 }
