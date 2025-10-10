@@ -7,7 +7,10 @@ import Image from "next/image"
 
 export function Hero() {
   const statsRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const mobileVideoRef = useRef<HTMLVideoElement>(null)
   const [isMobile, setIsMobile] = useState(false)
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false)
 
   useEffect(() => {
     // Check if window width is less than 768px
@@ -24,6 +27,28 @@ export function Hero() {
     // Cleanup
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  // Lazy load video when component comes into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !shouldLoadVideo) {
+            setShouldLoadVideo(true)
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    // Create a ref to the section element for video lazy loading
+    const currentSection = document.getElementById('home')
+    if (currentSection) {
+      observer.observe(currentSection)
+    }
+
+    return () => observer.disconnect()
+  }, [shouldLoadVideo])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -49,36 +74,68 @@ export function Hero() {
     <section id="home" className="relative border-b-5 border-blue-500 min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
         {/* Desktop Video */}
-        <iframe
-          className={`absolute inset-0 w-full h-full object-fill pointer-events-none ${
-            isMobile ? 'hidden' : 'block'
-          }`}
-          style={{
-            width: "100vw",
-            height: "150vh",
-            transform: "scale(1.8)",
-            opacity: 0.5,
-          }}
-          src="https://www.youtube.com/embed/nqtiyWKL5E0?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-          title="Background video desktop"
-          allow="autoplay; encrypted-media"
-        />
+        {shouldLoadVideo && (
+          <video
+            ref={videoRef}
+            className={`absolute inset-0 w-full h-full object-cover pointer-events-none ${
+              isMobile ? 'hidden' : 'block'
+            }`}
+            style={{
+              width: "100vw",
+              height: "150vh",
+              transform: "scale(1.8)",
+              opacity: 0.5,
+            }}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            onLoadedData={() => {
+              // Ensure video plays when loaded
+              if (videoRef.current) {
+                videoRef.current.play().catch(() => {
+                  // Handle autoplay failure silently
+                })
+              }
+            }}
+          >
+            <source src="/videos/desktop.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
 
         {/* Mobile Video */}
-        <iframe
-          className={`absolute inset-0 w-full h-full object-fill pointer-events-none ${
-            isMobile ? 'block' : 'hidden'
-          }`}
-          style={{
-            width: "100vw",
-            height: "150vh",
-            transform: "scale(2)",
-            opacity: 0.5,
-          }}
-          src="https://www.youtube.com/embed/FKHYW7UyDIY?autoplay=1&mute=1&loop=1&playlist=v7sL8O33foo&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-          title="Background video mobile"
-          allow="autoplay; encrypted-media"
-        />
+        {shouldLoadVideo && (
+          <video
+            ref={mobileVideoRef}
+            className={`absolute inset-0 w-full h-full object-cover pointer-events-none ${
+              isMobile ? 'block' : 'hidden'
+            }`}
+            style={{
+              width: "100vw",
+              height: "150vh",
+              transform: "scale(2)",
+              opacity: 0.5,
+            }}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            onLoadedData={() => {
+              // Ensure video plays when loaded
+              if (mobileVideoRef.current) {
+                mobileVideoRef.current.play().catch(() => {
+                  // Handle autoplay failure silently
+                })
+              }
+            }}
+          >
+            <source src="/videos/mobile.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60" />
       </div>
 
