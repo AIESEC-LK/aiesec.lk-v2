@@ -36,7 +36,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20">
           <a href="/" className="flex items-center relative z-10">
             <Image
-              src="https://aiesec.lk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbluelogo.11776f2a.png&w=384&q=75"
+              src="/images/navigation/aiesec-logo-blue.png"
               alt="AIESEC Sri Lanka"
               width={120}
               height={40}

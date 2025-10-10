@@ -176,19 +176,19 @@ export function Hero() {
 
           <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-42 max-w-4xl mx-auto">
             <div className="space-y-2">
-              <div className="text-5xl md:text-6xl font-light text-gray-900">500+</div>
+              <div className="text-5xl md:text-6xl font-light text-gray-900">1800+</div>
               <div className="text-sm text-gray-500 font-light">Active Members</div>
             </div>
             <div className="space-y-2">
-              <div className="text-5xl md:text-6xl font-light text-gray-900">15+</div>
+              <div className="text-5xl md:text-6xl font-light text-gray-900">22+</div>
               <div className="text-sm text-gray-500 font-light">Universities</div>
             </div>
             <div className="space-y-2">
-              <div className="text-5xl md:text-6xl font-light text-gray-900">1000+</div>
+              <div className="text-5xl md:text-6xl font-light text-gray-900">1500+</div>
               <div className="text-sm text-gray-500 font-light">Exchanges</div>
             </div>
             <div className="space-y-2">
-              <div className="text-5xl md:text-6xl font-light text-gray-900">30</div>
+              <div className="text-5xl md:text-6xl font-light text-gray-900">30+</div>
               <div className="text-sm text-gray-500 font-light">Years</div>
             </div>
           </div>
