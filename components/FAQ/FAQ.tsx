@@ -24,7 +24,7 @@ const FAQ = () => {
             </GradientText>
           </h2> */}
           <h2 className="text-4xl md:text-6xl font-bold mb-6 text-balance flex items-center justify-center gap-2 text-white">
-            Frequently Asked Questions
+            FAQ
           </h2>
 
           <p className="text-xl text-gray-300 leading-relaxed text-pretty">
