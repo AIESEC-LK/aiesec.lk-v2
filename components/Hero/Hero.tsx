@@ -151,8 +151,8 @@ export function Hero() {
             <Image 
               src="/images/hero/30 Years Logo.png"
               alt="AIESEC Sri Lanka 30 Years"
-              width={80}
-              height={40}
+              width={85}
+              height={42}
               className="object-contain hover:scale-110 transition-transform duration-300"
               priority
             />
