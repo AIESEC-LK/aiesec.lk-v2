@@ -87,10 +87,14 @@ export const entities = [
     name: "SLTC",
     logo: "/assets/images/entities/SLTC.webp",
   },
+  {
+    name: "Cinec Campus",
+    logo: "/assets/images/entities/cinec-logo.png",
+  },
 ];
 
 export const entitiesHeader = "Our Local Chapters";
 export const entitiesSubheader =
-  "AIESEC operates across 15+ universities in Sri Lanka, bringing leadership opportunities to students nationwide.";
+  "AIESEC operates across 22+ universities in Sri Lanka, bringing leadership opportunities to students nationwide.";
 export const entitiesCtaText = "Want to join AIESEC at your university?";
 export const entitiesCtaLink = "Get in Touch →";
