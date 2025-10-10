@@ -8,6 +8,7 @@ import Image from "next/image"
 export function Hero() {
   const statsRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const mobileVideoRef = useRef<HTMLVideoElement>(null)
   const [isMobile, setIsMobile] = useState(false)
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false)
 
@@ -105,20 +106,36 @@ export function Hero() {
         )}
 
         {/* Mobile Video */}
-        <iframe
-          className={`absolute inset-0 w-full h-full object-fill pointer-events-none ${
-            isMobile ? 'block' : 'hidden'
-          }`}
-          style={{
-            width: "100vw",
-            height: "150vh",
-            transform: "scale(2)",
-            opacity: 0.5,
-          }}
-          src="https://www.youtube.com/embed/FKHYW7UyDIY?autoplay=1&mute=1&loop=1&playlist=v7sL8O33foo&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-          title="Background video mobile"
-          allow="autoplay; encrypted-media"
-        />
+        {shouldLoadVideo && (
+          <video
+            ref={mobileVideoRef}
+            className={`absolute inset-0 w-full h-full object-cover pointer-events-none ${
+              isMobile ? 'block' : 'hidden'
+            }`}
+            style={{
+              width: "100vw",
+              height: "150vh",
+              transform: "scale(2)",
+              opacity: 0.5,
+            }}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            onLoadedData={() => {
+              // Ensure video plays when loaded
+              if (mobileVideoRef.current) {
+                mobileVideoRef.current.play().catch(() => {
+                  // Handle autoplay failure silently
+                })
+              }
+            }}
+          >
+            <source src="/videos/mobile.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60" />
       </div>
 
