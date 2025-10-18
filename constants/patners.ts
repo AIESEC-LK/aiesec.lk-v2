@@ -20,7 +20,7 @@ export const nationalPartners: Partner[] = [
     description: "RIDE is a leading energy drink in Sri Lanka.",
   },
   {
-    name: "Emarald",
+    name: "Emerald",
     logo: "/images/partners/Emarald - National Partner.avif",
     category: "National Partner",
     description: "Emarald is a leading technology company in Sri Lanka.",
