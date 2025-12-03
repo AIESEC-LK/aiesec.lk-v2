@@ -26,7 +26,7 @@ const Footer = () => {
               alt="AIESEC"
               className="h-12 w-auto"
             />
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed" style={{maxWidth: "50.1vh"}}>
               {footer.description}
             </p>
             <div className="flex gap-3 pt-2">

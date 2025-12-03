@@ -6,8 +6,8 @@ export const contactInfo : ContactInfo = {
   address: "102/2 , Nagahawatta Road, Maharagama, 10280",
   socialMedia: {
     facebook: "https://www.facebook.com/aiesec.lk",
-    instagram: "https://www.instagram.com/aiesec.lk",
-    linkedin: "https://www.linkedin.com/company/aiesec-sri-lanka",
-    twitter: "https://www.twitter.com/aiesec_lk",
+    instagram: "https://www.instagram.com/aiesecinsrilanka",
+    linkedin: "https://www.linkedin.com/company/aieseclk/",
+    twitter: "https://x.com/aieseclk",
   },
 };

@@ -52,10 +52,6 @@ export const entities = [
     logo: "/assets/images/entities/Rajarata University of Sri Lanka-min.png",
   },
   {
-    name: "Asia Pacific Institute of Information Technology",
-    logo: "/assets/images/entities/Asia_Pacific_Institute_of_Information_Technology-min-removebg-preview.png",
-  },
-  {
     name: "Saegis Campus",
     logo: "/assets/images/entities/Saegis Campus-min.png",
   },
@@ -63,10 +59,42 @@ export const entities = [
     name: "Horizon Campus",
     logo: "/assets/images/entities/Horizon_Campus_Logo-removebg-preview.png",
   },
+  {
+    name: "KIU",
+    logo: "/assets/images/entities/KIU.png",
+  },
+  {
+    name: " ",
+    logo: "/assets/images/entities/Empty.png",
+  },
+  {
+    name: " ",
+    logo: "/assets/images/entities/Empty.png",
+  },
+  {
+    name: "University of Vavuniya",
+    logo: "/assets/images/entities/University-of-Vavuniya-Logo.png",
+  },
+  {
+    name: "University of Jaffna",
+    logo: "/assets/images/entities/Jaffna.png",
+  },
+  {
+    name: "University of Eastern University, Sri Lanka",
+    logo: "/assets/images/entities/EUSL.png",
+  },
+  {
+    name: "SLTC",
+    logo: "/assets/images/entities/SLTC.webp",
+  },
+  {
+    name: "Cinec Campus",
+    logo: "/assets/images/entities/cinec-logo.png",
+  },
 ];
 
 export const entitiesHeader = "Our Local Chapters";
 export const entitiesSubheader =
-  "AIESEC operates across 15+ universities in Sri Lanka, bringing leadership opportunities to students nationwide.";
+  "AIESEC operates across 22+ universities in Sri Lanka, bringing leadership opportunities to students nationwide.";
 export const entitiesCtaText = "Want to join AIESEC at your university?";
 export const entitiesCtaLink = "Get in Touch →";
