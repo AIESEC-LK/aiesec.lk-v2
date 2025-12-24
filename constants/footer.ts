@@ -16,5 +16,6 @@ export const footer = {
     { name: "Opportunities", href: "#opportunities" },
     { name: "Partners", href: "#partners" },
     { name: "Contact", href: "#contact" },
+    {name:"Privacy and Cookie Policy", href:"/privacy-and-cookie-policy"},
   ],
 };
