@@ -9,8 +9,25 @@ import {
 export default function OurStory() {
   const [headerVisible, setHeaderVisible] = useState(false);
   const [paragraphsVisible, setParagraphsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
   const paragraphsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Check if window width is less than 768px for mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", checkMobile);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const headerObserver = new IntersectionObserver(
@@ -83,7 +100,7 @@ export default function OurStory() {
         className="absolute inset-0 bg-center bg-no-repeat opacity-30 z-20 pointer-events-none"
         style={{
           backgroundImage: "url('images/ourStory/sri-lanka-outline.webp')",
-          backgroundSize: "40%",
+          backgroundSize: isMobile ? "80%" : "40%",
           backgroundPosition: "center",
         }}
       />
