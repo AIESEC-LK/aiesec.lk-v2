@@ -15,13 +15,8 @@ export default function Home() {
     <div>
       <Navigation />
       <Hero />
-      <div className="relative">
-        <OurStory />
-      </div>
-
-      <div className=" mt-[475px] sm:mt-[300px] lg:mt-[250px]">
-        <Entities />
-      </div>
+      {/* <OurStory /> */}
+      <Entities />
       <ExploreOpportunities />
       <OpportunitiesForPartners />
       <OurPartners />
