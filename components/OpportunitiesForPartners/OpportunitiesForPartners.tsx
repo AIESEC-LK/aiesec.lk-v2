@@ -19,7 +19,7 @@ export function OpportunitiesForPartners() {
         className="  bg-transparent min-h-screen flex items-center justify-center"
         style={{
           backgroundImage: "url('/images/story/sri-lanka-line-image.avif')",
-          backgroundSize: "120% auto",
+          backgroundSize: "100% auto",
           backgroundPosition: "center bottom",
           backgroundRepeat: "no-repeat",
         }}
@@ -27,11 +27,6 @@ export function OpportunitiesForPartners() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="p-8 md:p-16">
-              <div className="flex items-center justify-center mb-8">
-                <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
-                  <Building2 className="text-gray-900" size={28} />
-                </div>
-              </div>
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 sm:mb-8 text-center text-slate-800 tracking-tight leading-[0.9]">
                 <span className="font-extralight">Opportunities For</span>{" "}
                 <span className="font-semibold" style={{ color: "#037EF3" }}>
