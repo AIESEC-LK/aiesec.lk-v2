@@ -22,7 +22,6 @@ export default function Home() {
       <OurPartners />
       <FAQ />
       <Contact />
-
       <Footer />
     </div>
   );

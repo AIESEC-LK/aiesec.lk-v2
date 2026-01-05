@@ -16,12 +16,12 @@ export function OpportunitiesForPartners() {
     <SpotlightWrapper spotlightColor={spotlightColor}>
       <section
         id="partner-opportunities"
-        className="  bg-transparent "
+        className="  bg-transparent min-h-screen flex items-center justify-center"
         style={{
           backgroundImage: "url('/images/story/sri-lanka-line-image.avif')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundSize: "120% auto",
+          backgroundPosition: "center bottom",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="container mx-auto px-4 lg:px-8">
@@ -32,10 +32,13 @@ export function OpportunitiesForPartners() {
                   <Building2 className="text-gray-900" size={28} />
                 </div>
               </div>
-              <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-center text-gray-900 tracking-tight">
-                {PARTNER_OPPORTUNITIES_HEADER}
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 sm:mb-8 text-center text-slate-800 tracking-tight leading-[0.9]">
+                <span className="font-extralight">Opportunities For</span>{" "}
+                <span className="font-semibold" style={{ color: "#037EF3" }}>
+                  Partners
+                </span>
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed text-center mb-12 font-normal max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed text-center mb-12 font-light max-w-4xl mx-auto">
                 {PARTNER_OPPORTUNITIES_DESCRIPTION}
               </p>
               <div className="grid md:grid-cols-3 gap-8 mb-12">
