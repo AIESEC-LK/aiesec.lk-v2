@@ -64,14 +64,6 @@ export const entities = [
     logo: "/assets/images/entities/KIU.png",
   },
   {
-    name: " ",
-    logo: "/assets/images/entities/Empty.png",
-  },
-  {
-    name: " ",
-    logo: "/assets/images/entities/Empty.png",
-  },
-  {
     name: "University of Vavuniya",
     logo: "/assets/images/entities/University-of-Vavuniya-Logo.png",
   },

@@ -12,17 +12,12 @@ import { Hero } from "@/components/Hero/Hero";
 import { About } from "@/components/About/About";
 export default function Home() {
   return (
-    <div >
+    <div>
       <Navigation />
       <Hero />
       <div className="relative">
-
-     
-
-          <OurStory />
-       
+        <OurStory />
       </div>
-
 
       <div className=" mt-[475px] sm:mt-[300px] lg:mt-[250px]">
         <Entities />
@@ -32,7 +27,6 @@ export default function Home() {
       <OurPartners />
       <FAQ />
       <Contact />
-
 
       <Footer />
     </div>
