@@ -51,58 +51,66 @@ export default function OurStoryCard() {
   }, []);
 
   return (
-    <div className="z-10 -top-50 left-1/2 -translate-x-1/2 bg-black absolute border-5 border-white/20 rounded-2xl shadow-sm max-w-5xl w-full text-center overflow-hidden">
-      <div className="relative px-2 sm:px-6 py-6 sm:py-10">
+    <div className="relative w-full max-w-6xl mx-auto text-center">
+      {/* LiquidEther background - full coverage behind content */}
+      <div className="absolute inset-0 z-0 opacity-20 rounded-3xl overflow-hidden">
+        <LiquidEther
+          colors={["#037EF3", "#F48924", "#F85A40"]}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo={true}
+          autoSpeed={0.2}
+          autoIntensity={1.5}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+          style={{ width: "100%", height: "100%" }}
+        />
+      </div>
 
-        {/* LiquidEther background - full coverage */}
-        <div className="absolute inset-0 z-0 opacity-60">
-          <LiquidEther
-            colors={['#5227FF', '#FF9FFC', '#B19EEF']}
-            mouseForce={20}
-            cursorSize={100}
-            isViscous={false}
-            viscous={30}
-            iterationsViscous={32}
-            iterationsPoisson={32}
-            resolution={0.5}
-            isBounce={false}
-            autoDemo={true}
-            autoSpeed={0.5}
-            autoIntensity={2.2}
-            takeoverDuration={0.25}
-            autoResumeDelay={3000}
-            autoRampDuration={0.6}
-            style={{ width: "100%", height: "100%" }}
-          />
+      {/* Content */}
+      <div className="relative z-10 px-6 sm:px-8 md:px-12">
+        <div
+          ref={headerRef}
+          className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-8 sm:mb-12 md:mb-16 text-balance text-center leading-[0.9] tracking-tight transition-all duration-1000 animate-fade-in ${
+            headerVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+        >
+          <span className="font-extralight text-white">Our</span>{" "}
+          <span className="font-semibold" style={{ color: "#037EF3" }}>
+            Story
+          </span>{" "}
+          <span className="font-light text-white">in</span>{" "}
+          <span className="font-semibold" style={{ color: "#F48924" }}>
+            Sri Lanka
+          </span>
         </div>
 
-        {/* Content - allow pointer events to pass through */}
-        <div className="relative z-10 pointer-events-none">
-          <div
-            ref={headerRef}
-            className={`story-header text-4xl md:text-6xl font-bold mb-6 text-balance text-center text-white transition-all duration-1000 pointer-events-auto ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        <div
+          ref={paragraphsRef}
+          className="space-y-8 sm:space-y-10 max-w-5xl mx-auto"
+        >
+          {ourStorySriLanka.map((paragraph, idx) => (
+            <p
+              key={idx}
+              className={`text-lg sm:text-xl md:text-2xl text-slate-200 leading-relaxed font-light transition-all duration-1000 ${
+                paragraphsVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }`}
-          >
-            <GradientText
-              colors={["#F42A41", "#FFD700", "#0085CA", "#FFD700", "#F42A41"]}
-              animationSpeed={8}
-              showBorder={false}
+              style={{ animationDelay: `${idx * 300}ms` }}
             >
-              <strong>{ourStorySriLankaHeader}</strong>
-            </GradientText>
-          </div>
-
-          <div ref={paragraphsRef} className="space-y-6">
-            {ourStorySriLanka.map((paragraph, idx) => (
-              <p
-                key={idx}
-                className={`story-paragraph text-xl text-gray-300 leading-relaxed text-pretty transition-all duration-1000 delay-${idx * 200} pointer-events-auto ${paragraphsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                  }`}
-              >
-                {paragraph}
-              </p>
-            ))}
-          </div>
+              {paragraph}
+            </p>
+          ))}
         </div>
       </div>
     </div>

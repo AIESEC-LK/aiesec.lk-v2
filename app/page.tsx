@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <Navigation />
       <Hero />
-      {/* <OurStory /> */}
+      <OurStory />
       <Entities />
       <ExploreOpportunities />
       <OpportunitiesForPartners />
