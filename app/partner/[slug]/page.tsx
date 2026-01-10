@@ -63,12 +63,8 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: Props) {
-  const partner =
-    nationalPartners.find((p) => p.slug === params) ||
-    globalPartners.find((p) => p.slug === params);
-
   return {
-    title: `${partner?.name || "Partner"} | AIESEC in Sri Lanka`,
-    description: partner?.description || "Partner details page",
+    title: `Partner | AIESEC in Sri Lanka`,
+    description: "Partner details page",
   };
 }
