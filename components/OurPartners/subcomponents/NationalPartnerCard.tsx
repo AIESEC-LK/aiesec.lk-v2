@@ -1,5 +1,6 @@
 "use client";
 import React, { memo, useMemo } from "react";
+import Link from "next/link";
 import { NationalPartnerCardProps } from "@/types/partner";
 
 const NationalPartnerCard = memo(({ partner }: NationalPartnerCardProps) => {
@@ -14,7 +15,7 @@ const NationalPartnerCard = memo(({ partner }: NationalPartnerCardProps) => {
     [] // Empty dependency array since colors are static
   );
 
-  return (
+  const cardContent = (
     <div className="max-w-xs group cursor-pointer mx-auto">
       {/* Card Container - Enhanced */}
       <div className="relative bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-96 flex flex-col hover:bg-gradient-to-br hover:from-white hover:to-gray-50 group-hover:-translate-y-1">
@@ -80,6 +81,13 @@ const NationalPartnerCard = memo(({ partner }: NationalPartnerCardProps) => {
       </div>
     </div>
   );
+
+  // Only make MAS and Cargills cards clickable with link to their detail pages
+  if ((partner.slug === "mas" || partner.slug === "cargills") && partner.slug) {
+    return <Link href={`/partner/${partner.slug}`}>{cardContent}</Link>;
+  }
+
+  return cardContent;
 });
 
 NationalPartnerCard.displayName = "NationalPartnerCard";
