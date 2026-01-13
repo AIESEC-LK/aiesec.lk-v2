@@ -38,6 +38,6 @@ jobs:
       - name: Run Docker Container
         run: docker run -d --name aieseclk -p 3000:3000 aieseclk
       - name: Stop Docker Container
-        run: docker stop sincerely
+        run: docker stop aieseclk
       - name: Remove Docker Container
-        run: docker rm sincerely
+        run: docker rm aieseclk
