@@ -16,7 +16,7 @@ export const nationalPartners: Partner[] = [
       {
         title: "Merchandiser Development",
         description: "Coordinate and facilitate the sample development process while ensuring customer T&A is met.\n\nResponsibilities:\n• Initiate sourcing of raw materials (which are not nominated by customers) with respective departments\n• Follow up with suppliers and customers to ensure raw materials are approved to proceed with the bulk in line with customer timelines and requirements\n• Accurate communication with procurement team (CPU) to proceed with bulk purchasing\n• Accurate price maintenance in SAP for FGs and all raw materials\n• Coordination with internal departments (ex: Costing, PDC, CPU, PCU, Sourcing, admin) to ensure customer requirements are met on time\n• Having a proper track on changes that happen throughout a given development cycle and communicating the same with respective internal departments to ensure bulk production is carried out as per latest customer modification",
-        deadline: "12/25/2025",
+        deadline: "01/31/2026",
         applicationLink: "https://url.uk.m.mimecastprotect.com/s/mdfRCqVr7u8DQQyxsXhyFElQXu?domain=egmh.fa.us6.oraclecloud.com/",
       },
     ],
