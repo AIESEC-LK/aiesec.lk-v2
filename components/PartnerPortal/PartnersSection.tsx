@@ -2,15 +2,25 @@
 import React from "react";
 import PartnerCard from "./PartnerCard";
 
-// Mock data based on the HTML structure provided
+// Partner data for the portal cards
 const nationalTalentPartners = [
   {
     id: 1,
     name: "MAS Holdings",
-    logo: "/images/partnerPortal/Logo_of_MAS_Holdings.png",
+    logo: "/images/partners/MAS - National Partner.png",
     category: "National Talent Partner",
-    description: "Global leader in consumer goods with diverse opportunities for young talent.",
-    link: "https://masholdings.com/"
+    description: "South Asia's largest design-to-delivery solution provider in apparel and textile manufacturing. Explore opportunities and join our team!",
+    link: "/partner/mas",
+    isInternal: true
+  },
+  {
+    id: 2,
+    name: "Cargills",
+    logo: "/images/partners/Cargills - National Partner.jpg",
+    category: "National Partner",
+    description: "A cornerstone of Sri Lanka's economy with over 180 years of heritage across Retail, FMCG, Restaurants, and more. Discover part-time opportunities!",
+    link: "/partner/cargills",
+    isInternal: true
   }
 ];
 
@@ -33,16 +43,16 @@ const PartnersSection = () => {
         </div>
 
         {/* Partners Content */}
-        <div className="flex flex-col lg:flex-row justify-center gap-16 lg:gap-24">
+        <div className="flex flex-col justify-center gap-16">
           
-          {/* National Talent Partners */}
-          <div className="flex-1 max-w-lg mx-auto lg:mx-0">
+          {/* Featured Partners */}
+          <div className="w-full">
             <h3 className="text-3xl font-bold text-center mb-6 text-gray-900">
-              National Talent Partner
+              Featured Partners
             </h3>
             <hr className="border-gray-300 mb-14" />
             
-            <div className="flex justify-center">
+            <div className="flex flex-wrap justify-center gap-8">
               {nationalTalentPartners.map((partner) => (
                 <PartnerCard key={partner.id} partner={partner} />
               ))}
