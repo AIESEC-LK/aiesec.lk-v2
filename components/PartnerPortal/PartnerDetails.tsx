@@ -103,7 +103,7 @@ const PartnerDetails = ({ partner }: PartnerDetailsProps) => {
             {/* Collaboration in Sri Lanka */}
             {partner.collaboration && !partner.collaboration.includes("coming soon") && (
               <Section
-                title="The Collaboration Between {partner.name} and AIESEC in Sri Lanka"
+                title={`The Collaboration Between ${partner.name} and AIESEC in Sri Lanka`}
                 content={
                   partner.collaboration ||
                   "Collaboration details coming soon. Please check back later."
