@@ -191,7 +191,7 @@ const PartnerDetails = ({ partner }: PartnerDetailsProps) => {
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-gray-800 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
-            <div className="sticky top-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 border-b border-gray-700 p-6 flex items-center justify-between">
+            <div className="sticky top-0 bg-gradient-to-r from-indigo-600 to-purple-600 border-b border-gray-700 p-6 flex items-center justify-between">
               <h2 className="text-3xl font-bold text-white">
                 Current Opportunities
               </h2>
