@@ -33,12 +33,6 @@ export const nationalPartners: Partner[] = [
     whyJoin: "Details about why AIESECers should join coming soon.",
     opportunitiesList: [
       {
-        title: "Part Time Work",
-        description: "About Us:\n\nAt Cargills, we are not just a Company; we are a cornerstone of Sri Lanka's vibrant economy. With a heritage spanning over 180 years, we have continuously evolved to become a leading force in multiple industries, including Retail, FMCG, Restaurants, Financial Services, Agribusiness, Cinemas, Hospitality, and Real Estate. Built on a strong foundation of values and ethics, we have spread our reach across Sri Lanka, with investments and operations that touch the lives of millions of consumers, farmers, and entrepreneurs on a daily basis. We are committed to leveraging technology to enhance operational excellence, create sustainable markets, and foster employment opportunities, all whilst actively engaging in initiatives that uplift communities and protect the environment to build a brighter future for all.\n\nPART TIME OPPORTUNITIES FOR STUDENTS & UNDERGRADUATES!\n\nWish you could do a part-time job and work around your busy study schedule?\n\nHere is an opportunity for you to earn money and be part of brands that proudly Serve the Nation!\n\nCome join Sri Lanka's #1 restaurant chain or Sri Lanka's #1 supermarket chain and help deliver exceptional service with passion while you study.\n\nWHY JOIN US?\n\n• Flexible working hours to match your academic schedule\n  - Morning Shift 01: 7.30 AM - 12.30 PM\n  - Morning Shift 02: 9.00 AM - 2.00 PM\n  - Evening Shift: 5.00 PM - 10.00 PM\n\n• Attractive pay & duty meals\n• Transport after evening shift\n• International-level training\n• Learn valuable skills in customer service, teamwork and operations\n• Receive a certificate of service after completing 6 months\n• Potential for a full-time career path with us\n\nWHO CAN APPLY?\n\n• Anyone passionate about Sri Lanka\n• Between 18–25 years\n• Able to work within the Western Province\n• Students & undergraduates\n• Possess good communication skills and a passion for customer service\n• Must be available to work selected 5 days\n• Driven by our Values: Customer Centric | Accountable | Respect | Green | Innovative | Love | Lead | Serve the Nation",
-        deadline: "1/31/2026",
-        applicationLink: "https://forms.gle/KRsAVeyaCzJWt1rA9",
-      },
-      {
         title: "Intern/Executive - Marketing",
         description: "Job Role:\n\nAssist in the development and execution of marketing campaigns tailored to various brands.\nPlay a lead role in Content Development for assigned projects.\nCollaborate with agencies and internal teams to generate, edit, and publish compelling content.\nPlay a lead role in performance marketing for selected brands.\nCoordinating promotional activities, events, and activations.\nDevelop trending content for social media platforms such as TikTok and Instagram.\nProvide input on constructive feedback based on customer/audience sentiments.\nResearch competition, investigate benchmarks and provide suggestions.\nPrepare and manage marketing budgets.\nTrack and report on marketing performance through detailed weekly/monthly reports.\nAssist in developing and executing innovative marketing strategies.\nAny other projects or tasks as requested by the Management.\n\nCandidate Requirements:\n\n• Passionate about Sri Lanka; you're committed to making a positive impact for our Country and its people.\n• Bachelor's Degree in Marketing, Business Management, or related discipline.\n• Professional qualification in CIM/APIDM/SLIM is a plus.\n• Prior experience in a similar role/function of 2 - 5 year's with a proven track record/accomplishments. Experience in FMCG is a plus.\n• Open to recent graduates and interns seeking practical experience.\n• Creative writing skills with the ability to craft compelling and engaging content.\n• Experience in managing social media platforms such as Facebook, Instagram, TikTok and LinkedIn.\n• Excellent communication skills in English & Sinhala. Tamil is a plus.\n• Prior experience with Meta ads manager, Google Analytics and Google Ads will be an added advantage.\n• A creative mindset and the ability to develop innovative and captivating content that resonates with the target audience.\n• Ability to work as a team player in multiple projects.\n• Prior experience working with marketing agencies is an added advantage.\n• Embody our Values: Customer Centric, Accountable, Respect, Green, Innovative, Love, Lead & Serve the Nation.\n• Should be able to work from Colombo.",
         deadline: "2/27/2026",
@@ -86,7 +80,20 @@ export const nationalPartners: Partner[] = [
     slug: "ceylinco-life",
     logo: "/images/partners/Ceylinco Life - National Partner.png",
     category: "National Talent Partner",
-    description: "Ceylinco Life is Sri Lanka's market leader in life insurance",
+    description: "",
+    aboutCompany: "Ceylinco Life has helped people progress towards their aspirations with peace of mind for over 37 years. Our insurance solutions are built around keeping you and those who you love secure, so that you can follow your goals and ambitions, free of any risks.",
+    partnerPortalVideo: "https://www.youtube.com/embed/NqWSpGSRITs",
+    whyPartner: "We believe that AIESEC has the best of what the youth has to offer and we have identified that there is a definite value match between AIESEC and Ceylinco Life. We hope that this partnership inspires leadership and creates a long standing and sustainable relationship between the two organizations.",
+    collaboration: "Our collaboration started in 2023 and we have witnessed the inspiring creativity and dynamism of AIESECers which prompted Ceylinco Life to forge a meaningful longterm partnership with AIESEC Sri Lanka.",
+    whyJoin: "An AIESECer is driven, motivated, and multi talented. They understand the results which emerge from hard work and they continuously seek to upscale their talents. These are valuable traits which are essential for any company.",
+    opportunitiesList: [
+      {
+        title: "Internship Opportunities",
+        description: "We currently have internship opportunities in multiple departments at the Company.\n\nJoin Ceylinco Life and gain valuable experience in Sri Lanka's leading life insurance company. Work alongside industry professionals and develop skills that will shape your career.",
+        deadline: "Open",
+        applicationLink: "",
+      },
+    ],
   },
   {
     name: "Nestle",
@@ -210,21 +217,21 @@ export const globalPartners: Partner[] = [
     description:
       ".",
   },
-   {
+  {
     name: "EY",
     logo: "/images/partners/ey.png",
     category: "Global Affiliation",
     description:
       ".",
   },
-   {
+  {
     name: "HKTE",
     logo: "/images/partners/hkte.png",
     category: "Global Affiliation",
     description:
       ".",
   },
-   {
+  {
     name: "IE University",
     logo: "/images/partners/ie University.png",
     category: "Global Affiliation",
