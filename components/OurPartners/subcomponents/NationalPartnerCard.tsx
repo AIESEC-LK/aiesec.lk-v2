@@ -63,13 +63,12 @@ const NationalPartnerCard = memo(({ partner }: NationalPartnerCardProps) => {
           {/* Category Badge */}
           <div className="flex justify-center">
             <span
-              className={`text-xs font-semibold px-4 py-2 rounded-full transition-all duration-300 shadow-sm group-hover:shadow-md ${
-                partner.category === "National Partner"
+              className={`text-xs font-semibold px-4 py-2 rounded-full transition-all duration-300 shadow-sm group-hover:shadow-md ${partner.category === "National Partner"
                   ? "bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800 group-hover:from-amber-200 group-hover:to-yellow-200"
                   : partner.category === "National Talent Partner"
-                  ? "bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 group-hover:from-emerald-200 group-hover:to-green-200"
-                  : "bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 group-hover:from-slate-200 group-hover:to-gray-200"
-              }`}
+                    ? "bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 group-hover:from-emerald-200 group-hover:to-green-200"
+                    : "bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 group-hover:from-slate-200 group-hover:to-gray-200"
+                }`}
             >
               {partner.category}
             </span>
@@ -82,8 +81,8 @@ const NationalPartnerCard = memo(({ partner }: NationalPartnerCardProps) => {
     </div>
   );
 
-  // Only make MAS and Cargills cards clickable with link to their detail pages
-  if ((partner.slug === "mas" || partner.slug === "cargills") && partner.slug) {
+  // Only make MAS, Cargills, and Ceylinco Life cards clickable with link to their detail pages
+  if ((partner.slug === "mas" || partner.slug === "cargills" || partner.slug === "ceylinco-life") && partner.slug) {
     return <Link href={`/partner/${partner.slug}`}>{cardContent}</Link>;
   }
 
