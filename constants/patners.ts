@@ -41,6 +41,26 @@ export const nationalPartners: Partner[] = [
     ],
   },
   {
+    name: "Ceylinco Life",
+    slug: "ceylinco-life",
+    logo: "/images/partners/Ceylinco Life - National Partner.png",
+    category: "National Talent Partner",
+    description: "",
+    aboutCompany: "Ceylinco Life has helped people progress towards their aspirations with peace of mind for over 37 years. Our insurance solutions are built around keeping you and those who you love secure, so that you can follow your goals and ambitions, free of any risks.",
+    partnerPortalVideo: "https://www.youtube.com/embed/NqWSpGSRITs",
+    whyPartner: "We believe that AIESEC has the best of what the youth has to offer and we have identified that there is a definite value match between AIESEC and Ceylinco Life. We hope that this partnership inspires leadership and creates a long standing and sustainable relationship between the two organizations.",
+    collaboration: "Our collaboration started in 2023 and we have witnessed the inspiring creativity and dynamism of AIESECers which prompted Ceylinco Life to forge a meaningful longterm partnership with AIESEC Sri Lanka.",
+    whyJoin: "An AIESECer is driven, motivated, and multi talented. They understand the results which emerge from hard work and they continuously seek to upscale their talents. These are valuable traits which are essential for any company.",
+    opportunitiesList: [
+      {
+        title: "Internship Opportunities",
+        description: "We currently have internship opportunities in multiple departments at the Company.\n\nJoin Ceylinco Life and gain valuable experience in Sri Lanka's leading life insurance company. Work alongside industry professionals and develop skills that will shape your career.",
+        deadline: "Open",
+        applicationLink: "",
+      },
+    ],
+  },
+  {
     name: "DIMO",
     slug: "dimo",
     logo: "/images/partners/DIMO - National Partner.avif",
@@ -74,26 +94,6 @@ export const nationalPartners: Partner[] = [
     logo: "/images/partners/e-wis - National Partner.png",
     category: "National Partner",
     description: "e-wis is a leading technology company in Sri Lanka.",
-  },
-  {
-    name: "Ceylinco Life",
-    slug: "ceylinco-life",
-    logo: "/images/partners/Ceylinco Life - National Partner.png",
-    category: "National Talent Partner",
-    description: "",
-    aboutCompany: "Ceylinco Life has helped people progress towards their aspirations with peace of mind for over 37 years. Our insurance solutions are built around keeping you and those who you love secure, so that you can follow your goals and ambitions, free of any risks.",
-    partnerPortalVideo: "https://www.youtube.com/embed/NqWSpGSRITs",
-    whyPartner: "We believe that AIESEC has the best of what the youth has to offer and we have identified that there is a definite value match between AIESEC and Ceylinco Life. We hope that this partnership inspires leadership and creates a long standing and sustainable relationship between the two organizations.",
-    collaboration: "Our collaboration started in 2023 and we have witnessed the inspiring creativity and dynamism of AIESECers which prompted Ceylinco Life to forge a meaningful longterm partnership with AIESEC Sri Lanka.",
-    whyJoin: "An AIESECer is driven, motivated, and multi talented. They understand the results which emerge from hard work and they continuously seek to upscale their talents. These are valuable traits which are essential for any company.",
-    opportunitiesList: [
-      {
-        title: "Internship Opportunities",
-        description: "We currently have internship opportunities in multiple departments at the Company.\n\nJoin Ceylinco Life and gain valuable experience in Sri Lanka's leading life insurance company. Work alongside industry professionals and develop skills that will shape your career.",
-        deadline: "Open",
-        applicationLink: "",
-      },
-    ],
   },
   {
     name: "Nestle",
