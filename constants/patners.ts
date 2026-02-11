@@ -19,6 +19,42 @@ export const nationalPartners: Partner[] = [
         deadline: "01/31/2026",
         applicationLink: "https://url.uk.m.mimecastprotect.com/s/mdfRCqVr7u8DQQyxsXhyFElQXu?domain=egmh.fa.us6.oraclecloud.com/",
       },
+      {
+        title: "Intern - Sourcing & Supply Chain",
+        description: "Key Responsibilities:\n\n• Assist in sourcing and procurement of textile materials.\n• Identify and analyze different fabric styles.\n• Conduct research on fabric properties, trends, and processes.\n• Support supply chain operations and vendor coordination.\n\nKnowledge and Skills:\n\n• Pursuing or completed a degree in Textile Engineering, Supply Chain Management, or a related field.\n• Basic understanding of textile materials and manufacturing processes.\n• Strong analytical skills with attention to detail.\n• Ability to work in a dynamic environment and collaborate with teams.",
+        deadline: "Open",
+        applicationLink: "https://egmh.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/17799",
+      },
+      {
+        title: "Intern - Quality Assurance",
+        description: "Key Responsibilities:\n\n• Support Quality Assurance team in monitoring quality standards across flat knitting, sewing, and linking operations\n• Assist in in-line and end-line quality inspections.\n• Identify and report knitting, sewing, and linking defects.\n• Support measurement checking and ensure compliance with specifications.\n• Assist in maintaining quality records, checklists, and reports.\n• Support AQL and final inspection activities under supervision.\n• Coordinate with production teams to communicate quality issues.\n• Assist in root cause identification for quality defects.\n• Follow and support MAS quality standards, SOPs, and compliance requirements.\n• Support continuous improvement activities related to quality and process efficiency.\n• Adhere to workplace safety and 5S practices.\n\nQualifications:\n\n• Undergraduate or Bachelor's Degree Exposure through industrial training, internship, or academic projects in: Apparel / Textile / Fashion Technology.\n• Exposure to flat knitting, sewing, and linking operations will be an added advantage.\n• Willingness to learn quality processes in a manufacturing environment.",
+        deadline: "Open",
+        applicationLink: "https://url.uk.m.mimecastprotect.com/s/i1dAC4kqQSB8XKK8IOfNI4JUXy?domain=egmh.fa.us6.oraclecloud.com",
+      },
+      {
+        title: "Intern - Talent Attraction",
+        description: "Key Responsibilities:\n\n• Support the coordination of career fairs, university engagements, skill development programs\n• Support the coordination of Employer Branding activities.\n• Support with the day-to-day activities for the talent attraction team.\n\nQualifications, Experience, Skill, and Competencies:\n\n• Proactive and passionate undergraduate in Business, HR, Marketing or related discipline who's eager to learn, collaborate, and create meaningful impact.\n• Energetic & outgoing\n• Good communication skills\n• Able to support the team in executing projects.",
+        deadline: "Open",
+        applicationLink: "https://url.uk.m.mimecastprotect.com/s/-fhJCnYoxC7WkROpc9fLIJ3_Wh?domain=egmh.fa.us6.oraclecloud.com",
+      },
+      {
+        title: "Intern - Autonomation",
+        description: "Key Responsibilities:\n\n• Collect data on operation cycle times, applicable quantity etc. to calculate return of investment (ROI), degree of automation and viability in proposed projects.\n• Finalize final design concepts after using various information gathering tools and processes such as brainstorming sessions, expert advice, market research, FMEA etc\n• Use CAD software to design related mechanical, pneumatic systems in machines and control system wiring in automated machines.\n• Develop flowcharts / State Machine diagrams of machines according to its desired functionality and perform control system programming and debugging.\n• Lead fabrication of mechanical systems and wiring and manufacture of electrical/electronic control systems.\n• Design Printed Circuit Boards for automated machine control systems.\n• Perform in-house and factory testing and validate requirements related to quality of the product, easiness of the user/operator, reliability of machine etc.\n• Validated solutions to be commercialized adhering to Engineering validation testing (EVT), Design Validation Testing (DVT) and Production Validation testing (PVT) guidelines\n\nKey Qualifications:\n\n• Following a degree program in electrical or mechatronic engineering\n• Strong analytical skills.\n• Strong communication skills.",
+        deadline: "Open",
+        applicationLink: "https://egmh.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/17859",
+      },
+      {
+        title: "Intern - Human Resources & Administration",
+        description: "Key Responsibilities:\n\n• Assist in managing headcount (HC) data and tracking employee movements.\n• Support HR Business Partnering activities and day-to-day HR operations.\n• Assist in maintaining HR trackers, reports, and basic dashboards.\n• Support employee engagement initiatives and internal communications.\n• Assist with HR documentation, system updates, and data verification.\n• Provide support for HR analytics and ad-hoc HR projects as required.\n\nKnowledge and Skills:\n\n• Currently pursuing or has completed a degree or diploma in Human Resource Management, Business Management, or Administration\n• Strong communication and interpersonal skills.\n• Proficient in working with numbers with good analytical ability.\n• An outgoing and proactive individual willing to take responsibility.\n• Ability to work independently with minimal supervision.",
+        deadline: "Open",
+        applicationLink: "https://url.uk.m.mimecastprotect.com/s/FAhZCy6Dohr48AXpCZfxIx3lt_?domain=egmh.fa.us6.oraclecloud.com",
+      },
+      {
+        title: "Assistant - Talent Acquisition Service Delivery",
+        description: "Key Responsibilities:\n\n• Ensure to process all recruitment requests via Recruitment Requisition Form process (RRFs) and the corresponding JDs etc., coordinating with required parties whilst, drafting recruitment specs and advertisements and obtaining relevant approvals\n• Conduct the screening and shortlisting process by evaluating applications received based on minimum criteria required to perform the job\n• Verifying applicant's details and verifying documentation and completing other standard protocols.\n• Schedule and conduct standard assessments relevant to the vacancy, whilst liaising with identified HODs for technical specific assessments\n• Conduct reference or clearance checks on the shortlisted candidates\n• Ensure to report and maintain key metrics designed to measure and predict staffing activity related to the post interview process\n• Conduct research on Technical and Soft Skills required for certain job roles to enhance the practical knowledge\n\nKnowledge and Skills:\n\n• Following a degree or a professional qualification in Human Resource Management.\n• 1 year of experience in Recruitment or Staffing.\n• Excellent communication and presentation skills.\n• Good interpersonal and relationship management skills.\n• Good time management with IT literacy.",
+        deadline: "Open",
+        applicationLink: "https://url.uk.m.mimecastprotect.com/s/NECBC9py1IkOlrDqFEh7IqG9Be?domain=egmh.fa.us6.oraclecloud.com",
+      },
     ],
   },
   {
