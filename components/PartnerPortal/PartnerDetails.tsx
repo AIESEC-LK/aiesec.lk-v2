@@ -213,11 +213,11 @@ const PartnerDetails = ({ partner }: PartnerDetailsProps) => {
                     key={index}
                     className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-400/30 rounded-2xl p-6"
                   >
-                    <div className="flex items-start justify-between mb-4">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-2">
                       <h3 className="text-2xl font-bold text-white">
                         {opportunity.title}
                       </h3>
-                      <span className="inline-block px-3 py-1 bg-indigo-500/20 border border-indigo-400/50 rounded-full text-sm font-semibold text-indigo-300 whitespace-nowrap ml-4">
+                      <span className="inline-block self-start px-3 py-1 bg-indigo-500/20 border border-indigo-400/50 rounded-full text-sm font-semibold text-indigo-300 whitespace-nowrap">
                         Deadline: {opportunity.deadline}
                       </span>
                     </div>
