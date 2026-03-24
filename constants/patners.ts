@@ -55,6 +55,24 @@ export const nationalPartners: Partner[] = [
         deadline: "Open",
         applicationLink: "https://url.uk.m.mimecastprotect.com/s/NECBC9py1IkOlrDqFEh7IqG9Be?domain=egmh.fa.us6.oraclecloud.com",
       },
+      {
+        title: "Intern - Digital Excellence (Analytical)",
+        description: "Key Responsibilities:\n\n• Assisting in developing comprehensive project schedules, identifying key milestones, and tracking overall progress to ensure timely delivery.\n• Utilizing Jira project management software to create, manage, and prioritize tasks, track deadlines, and monitor project progress.\n• Creating and organizing Jira dashboards and projects to provide clear visualizations of project status and team performance.\n• Preparing detailed meeting agendas and taking accurate minutes during discussions.\n• Following up on action items to ensure accountability and timely execution of tasks.\n• Collaborating with diverse teams, including Process Analysts, Solution Architects, Developers, and business stakeholders, to identify and resolve issues that impact project timelines and deliverables.\n• Actively participating in the planning and execution of project rollouts, ensuring all phases are aligned with project goals.\n• Coordinating and supporting project deployment teams as needed, facilitating resource availability and alignment with project objectives.\n\nKey Qualifications:\n\n• Currently a University Student pursuing an IT related Degree and during their internship period\n• Good communication skills",
+        deadline: "Open",
+        applicationLink: "https://egmh.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/17859https://url.uk.m.mimecastprotect.com/s/Mf0tCV5kAHxqvvoBcGfpSEe7z-?domain=egmh.fa.us6.oraclecloud.comhttps://url.uk.m.mimecastprotect.com/s/Mf0tCV5kAHxqvvoBcGfpSEe7z-?domain=egmh.fa.us6.oraclecloud.com",
+      },
+      {
+        title: "Intern - Digital Excellence (Management)",
+        description: "Key Responsibilities:\n\n• Assist in contract Documentation Support\n• Assist in stakeholder Coordination & Tracking\n• Manage Vendor & Contract Data Management\n•Co-ordinate Commercial & Compliance Review Assistance\n• Provide Meeting & Communication Support\n\nKey Qualifications:\n\n• Following a degree in Business IT/ Business Management\n• Good communication skills\n• Good management skills",
+        deadline: "Open",
+        applicationLink: "https://url.uk.m.mimecastprotect.com/s/YeMwCy6DohrOno06tZf4Sxlx96?domain=egmh.fa.us6.oraclecloud.com",
+      },
+      {
+        title: "Intern - Group Lean Enterprise",
+        description: "Key Responsibilities:\n\n• Research, develop, and experiment the concepts of the SI and MP models in collaboration with central, divisional, plant teams, and industry experts in order to support continuous improvements.\n• Facilitate workshops and training sessions on Lean methodologies, SI & MP best practices.\n• Work closely with divisional & plant teams to address bottlenecks and performance gaps.\n• Coordinate cross-functional meetings and follow up on tasks\n\nKey Qualifications:\n\n• Undergraduate in Supply Chain Management/ Logistics/ Mathematics/ Statistics/ Management studies from a recognized university\n• Understanding of Lean manufacturing\n• Understanding of Supply chain management\n• Skills in Power BI\n• Skills in MS office (Excel / Word / Power point)\n• Proficiency in both Sinhala & English",
+        deadline: "Open",
+        applicationLink: "https://url.uk.m.mimecastprotect.com/s/D1I-C02mYFGzGQMrCwflI9wivf?domain=egmh.fa.us6.oraclecloud.com",
+      },
     ],
   },
   {
