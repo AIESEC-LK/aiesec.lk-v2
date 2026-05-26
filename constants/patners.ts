@@ -7,53 +7,79 @@ export const nationalPartners: Partner[] = [
     logo: "/images/partners/MAS - National Partner.png",
     category: "National Partner",
     description: "",
-    aboutCompany: "MAS Holdings is South Asia's largest design-to-delivery solution providers in apparel and textile manufacturing. With a global community of 100,000, today, MAS spans across 14 countries with its portfolio of intimate wear, sports and performance wear, athleisure and swimwear now expanding into wearable technology, FemTech, logistics and fabric parks worldwide. Over three decades, MAS has earned a global recognition for its ethical and sustainable working environment as well as its craftsmanship and product excellence.",
+    aboutCompany:
+      "MAS Holdings is South Asia's largest design-to-delivery solution providers in apparel and textile manufacturing. With a global community of 100,000, today, MAS spans across 14 countries with its portfolio of intimate wear, sports and performance wear, athleisure and swimwear now expanding into wearable technology, FemTech, logistics and fabric parks worldwide. Over three decades, MAS has earned a global recognition for its ethical and sustainable working environment as well as its craftsmanship and product excellence.",
     partnerPortalVideo: "https://www.youtube.com/embed/-SHVYfTfXQI",
-    whyPartner: "At MAS, our purpose is rooted in trust, mutual respect, and a passion for excellence. We believe in empowering people and driving meaningful change through innovation and sustainability. Partnering with AIESEC allows us to connect with a global network of young changemakers who live by values that mirror our own, striving for excellence, demonstrating integrity, living diversity, activating leadership, and acting sustainably. These future leaders bring fresh ideas, global perspectives, and an entrepreneurial spirit that align perfectly with the MAS culture. Through this partnership, we can inspire and develop purpose led talent, strengthen our brand among the next generation of leaders, and collaborate on initiatives that create real impact across communities. Together with AIESEC, MAS aims to nurture Changemakers who will shape a more sustainable, inclusive, and innovative future for our people, our business, and the planet.",
-    collaboration: "At MAS, we believe in empowering people and creating opportunities that inspire growth, innovation, and positive change. Our collaboration with AIESEC in Sri Lanka reflects this belief, a partnership built on shared values of leadership, diversity, integrity, and sustainability. Together, we aim to nurture young changemakers who are ready to lead with purpose and contribute to a better future. Through AIESEC's deep rooted local platform and MAS's widespread network, we create meaningful opportunities that bridge the gap between education and the world of work. This partnership allows us to engage with passionate youth who bring fresh thinking, creativity, and a global mindset  qualities that align with our culture of continuous innovation. For MAS, collaborating with AIESEC is more than a talent initiative, it's an investment in the next generation of leaders who will drive progress for our business, our communities, and our planet.",
-    whyJoin: "Why MAS? Because we're not just an organization we're a movement. Just like in AIESEC, you'll be challenged to step out of your comfort zone, work with diverse teams, and lead projects that create real impact. At MAS, you'll have the opportunity to connect with people from around the world, innovate in a dynamic environment, and develop skills that shape you as a confident, responsible, and globally-minded individual. Here, your ideas matter, your growth is nurtured, and your contributions make a difference to both business and community.",
+    whyPartner:
+      "At MAS, our purpose is rooted in trust, mutual respect, and a passion for excellence. We believe in empowering people and driving meaningful change through innovation and sustainability. Partnering with AIESEC allows us to connect with a global network of young changemakers who live by values that mirror our own, striving for excellence, demonstrating integrity, living diversity, activating leadership, and acting sustainably. These future leaders bring fresh ideas, global perspectives, and an entrepreneurial spirit that align perfectly with the MAS culture. Through this partnership, we can inspire and develop purpose led talent, strengthen our brand among the next generation of leaders, and collaborate on initiatives that create real impact across communities. Together with AIESEC, MAS aims to nurture Changemakers who will shape a more sustainable, inclusive, and innovative future for our people, our business, and the planet.",
+    collaboration:
+      "At MAS, we believe in empowering people and creating opportunities that inspire growth, innovation, and positive change. Our collaboration with AIESEC in Sri Lanka reflects this belief, a partnership built on shared values of leadership, diversity, integrity, and sustainability. Together, we aim to nurture young changemakers who are ready to lead with purpose and contribute to a better future. Through AIESEC's deep rooted local platform and MAS's widespread network, we create meaningful opportunities that bridge the gap between education and the world of work. This partnership allows us to engage with passionate youth who bring fresh thinking, creativity, and a global mindset  qualities that align with our culture of continuous innovation. For MAS, collaborating with AIESEC is more than a talent initiative, it's an investment in the next generation of leaders who will drive progress for our business, our communities, and our planet.",
+    whyJoin:
+      "Why MAS? Because we're not just an organization we're a movement. Just like in AIESEC, you'll be challenged to step out of your comfort zone, work with diverse teams, and lead projects that create real impact. At MAS, you'll have the opportunity to connect with people from around the world, innovate in a dynamic environment, and develop skills that shape you as a confident, responsible, and globally-minded individual. Here, your ideas matter, your growth is nurtured, and your contributions make a difference to both business and community.",
     opportunitiesList: [
       {
-        title: "Merchandiser Development",
-        description: "Coordinate and facilitate the sample development process while ensuring customer T&A is met.\n\nResponsibilities:\n• Initiate sourcing of raw materials (which are not nominated by customers) with respective departments\n• Follow up with suppliers and customers to ensure raw materials are approved to proceed with the bulk in line with customer timelines and requirements\n• Accurate communication with procurement team (CPU) to proceed with bulk purchasing\n• Accurate price maintenance in SAP for FGs and all raw materials\n• Coordination with internal departments (ex: Costing, PDC, CPU, PCU, Sourcing, admin) to ensure customer requirements are met on time\n• Having a proper track on changes that happen throughout a given development cycle and communicating the same with respective internal departments to ensure bulk production is carried out as per latest customer modification",
-        deadline: "01/31/2026",
-        applicationLink: "https://url.uk.m.mimecastprotect.com/s/mdfRCqVr7u8DQQyxsXhyFElQXu?domain=egmh.fa.us6.oraclecloud.com/",
+        title: "Intern ‐ Talent Attraction",
+        description:
+          "Key Responsibilities:\n\n• Support the coordination of career fairs, university engagements, skill development programs\n• Support the coordination of Employer Branding activities.\n• Support with the day-to-day activities for the talent attraction team.\n \n Qualifications, Experience, Skill, and Competencies:\n\n• Proactive and passionate undergraduate in Business, HR, Marketing or related discipline who’s eager to learn, collaborate, and create meaningful impact.\n• Energetic & outgoing\n• Good communication skills\n• Able to support the team in executing projects.",
+        deadline: "open",
+        applicationLink:
+          "https://egmh.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/19294/?utm_medium=jobshare&utm_source=External+Job+Share",
       },
+      // {
+      //   title: "Merchandiser Development",
+      //   description:
+      //     "Coordinate and facilitate the sample development process while ensuring customer T&A is met.\n\nResponsibilities:\n• Initiate sourcing of raw materials (which are not nominated by customers) with respective departments\n• Follow up with suppliers and customers to ensure raw materials are approved to proceed with the bulk in line with customer timelines and requirements\n• Accurate communication with procurement team (CPU) to proceed with bulk purchasing\n• Accurate price maintenance in SAP for FGs and all raw materials\n• Coordination with internal departments (ex: Costing, PDC, CPU, PCU, Sourcing, admin) to ensure customer requirements are met on time\n• Having a proper track on changes that happen throughout a given development cycle and communicating the same with respective internal departments to ensure bulk production is carried out as per latest customer modification",
+      //   deadline: "01/31/2026",
+      //   applicationLink:
+      //     "https://url.uk.m.mimecastprotect.com/s/mdfRCqVr7u8DQQyxsXhyFElQXu?domain=egmh.fa.us6.oraclecloud.com/",
+      // },
       {
         title: "Intern - Sourcing & Supply Chain",
-        description: "Key Responsibilities:\n\n• Assist in sourcing and procurement of textile materials.\n• Identify and analyze different fabric styles.\n• Conduct research on fabric properties, trends, and processes.\n• Support supply chain operations and vendor coordination.\n\nKnowledge and Skills:\n\n• Pursuing or completed a degree in Textile Engineering, Supply Chain Management, or a related field.\n• Basic understanding of textile materials and manufacturing processes.\n• Strong analytical skills with attention to detail.\n• Ability to work in a dynamic environment and collaborate with teams.",
+        description:
+          "Key Responsibilities:\n\n• Assist in sourcing and procurement of textile materials.\n• Identify and analyze different fabric styles.\n• Conduct research on fabric properties, trends, and processes.\n• Support supply chain operations and vendor coordination.\n\nKnowledge and Skills:\n\n• Pursuing or completed a degree in Textile Engineering, Supply Chain Management, or a related field.\n• Basic understanding of textile materials and manufacturing processes.\n• Strong analytical skills with attention to detail.\n• Ability to work in a dynamic environment and collaborate with teams.",
         deadline: "Open",
-        applicationLink: "https://egmh.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/17799",
+        applicationLink:
+          "https://egmh.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/17799",
       },
       {
         title: "Intern - Quality Assurance",
-        description: "Key Responsibilities:\n\n• Support Quality Assurance team in monitoring quality standards across flat knitting, sewing, and linking operations\n• Assist in in-line and end-line quality inspections.\n• Identify and report knitting, sewing, and linking defects.\n• Support measurement checking and ensure compliance with specifications.\n• Assist in maintaining quality records, checklists, and reports.\n• Support AQL and final inspection activities under supervision.\n• Coordinate with production teams to communicate quality issues.\n• Assist in root cause identification for quality defects.\n• Follow and support MAS quality standards, SOPs, and compliance requirements.\n• Support continuous improvement activities related to quality and process efficiency.\n• Adhere to workplace safety and 5S practices.\n\nQualifications:\n\n• Undergraduate or Bachelor's Degree Exposure through industrial training, internship, or academic projects in: Apparel / Textile / Fashion Technology.\n• Exposure to flat knitting, sewing, and linking operations will be an added advantage.\n• Willingness to learn quality processes in a manufacturing environment.",
+        description:
+          "Key Responsibilities:\n\n• Support Quality Assurance team in monitoring quality standards across flat knitting, sewing, and linking operations\n• Assist in in-line and end-line quality inspections.\n• Identify and report knitting, sewing, and linking defects.\n• Support measurement checking and ensure compliance with specifications.\n• Assist in maintaining quality records, checklists, and reports.\n• Support AQL and final inspection activities under supervision.\n• Coordinate with production teams to communicate quality issues.\n• Assist in root cause identification for quality defects.\n• Follow and support MAS quality standards, SOPs, and compliance requirements.\n• Support continuous improvement activities related to quality and process efficiency.\n• Adhere to workplace safety and 5S practices.\n\nQualifications:\n\n• Undergraduate or Bachelor's Degree Exposure through industrial training, internship, or academic projects in: Apparel / Textile / Fashion Technology.\n• Exposure to flat knitting, sewing, and linking operations will be an added advantage.\n• Willingness to learn quality processes in a manufacturing environment.",
         deadline: "Open",
-        applicationLink: "https://url.uk.m.mimecastprotect.com/s/i1dAC4kqQSB8XKK8IOfNI4JUXy?domain=egmh.fa.us6.oraclecloud.com",
+        applicationLink:
+          "https://url.uk.m.mimecastprotect.com/s/i1dAC4kqQSB8XKK8IOfNI4JUXy?domain=egmh.fa.us6.oraclecloud.com",
       },
-      {
-        title: "Intern - Talent Attraction",
-        description: "Key Responsibilities:\n\n• Support the coordination of career fairs, university engagements, skill development programs\n• Support the coordination of Employer Branding activities.\n• Support with the day-to-day activities for the talent attraction team.\n\nQualifications, Experience, Skill, and Competencies:\n\n• Proactive and passionate undergraduate in Business, HR, Marketing or related discipline who's eager to learn, collaborate, and create meaningful impact.\n• Energetic & outgoing\n• Good communication skills\n• Able to support the team in executing projects.",
-        deadline: "Open",
-        applicationLink: "https://url.uk.m.mimecastprotect.com/s/-fhJCnYoxC7WkROpc9fLIJ3_Wh?domain=egmh.fa.us6.oraclecloud.com",
-      },
+      // {
+      //   title: "Intern - Talent Attraction",
+      //   description:
+      //     "Key Responsibilities:\n\n• Support the coordination of career fairs, university engagements, skill development programs\n• Support the coordination of Employer Branding activities.\n• Support with the day-to-day activities for the talent attraction team.\n\nQualifications, Experience, Skill, and Competencies:\n\n• Proactive and passionate undergraduate in Business, HR, Marketing or related discipline who's eager to learn, collaborate, and create meaningful impact.\n• Energetic & outgoing\n• Good communication skills\n• Able to support the team in executing projects.",
+      //   deadline: "Open",
+      //   applicationLink:
+      //     "https://url.uk.m.mimecastprotect.com/s/-fhJCnYoxC7WkROpc9fLIJ3_Wh?domain=egmh.fa.us6.oraclecloud.com",
+      // },
       {
         title: "Intern - Autonomation",
-        description: "Key Responsibilities:\n\n• Collect data on operation cycle times, applicable quantity etc. to calculate return of investment (ROI), degree of automation and viability in proposed projects.\n• Finalize final design concepts after using various information gathering tools and processes such as brainstorming sessions, expert advice, market research, FMEA etc\n• Use CAD software to design related mechanical, pneumatic systems in machines and control system wiring in automated machines.\n• Develop flowcharts / State Machine diagrams of machines according to its desired functionality and perform control system programming and debugging.\n• Lead fabrication of mechanical systems and wiring and manufacture of electrical/electronic control systems.\n• Design Printed Circuit Boards for automated machine control systems.\n• Perform in-house and factory testing and validate requirements related to quality of the product, easiness of the user/operator, reliability of machine etc.\n• Validated solutions to be commercialized adhering to Engineering validation testing (EVT), Design Validation Testing (DVT) and Production Validation testing (PVT) guidelines\n\nKey Qualifications:\n\n• Following a degree program in electrical or mechatronic engineering\n• Strong analytical skills.\n• Strong communication skills.",
+        description:
+          "Key Responsibilities:\n\n• Collect data on operation cycle times, applicable quantity etc. to calculate return of investment (ROI), degree of automation and viability in proposed projects.\n• Finalize final design concepts after using various information gathering tools and processes such as brainstorming sessions, expert advice, market research, FMEA etc\n• Use CAD software to design related mechanical, pneumatic systems in machines and control system wiring in automated machines.\n• Develop flowcharts / State Machine diagrams of machines according to its desired functionality and perform control system programming and debugging.\n• Lead fabrication of mechanical systems and wiring and manufacture of electrical/electronic control systems.\n• Design Printed Circuit Boards for automated machine control systems.\n• Perform in-house and factory testing and validate requirements related to quality of the product, easiness of the user/operator, reliability of machine etc.\n• Validated solutions to be commercialized adhering to Engineering validation testing (EVT), Design Validation Testing (DVT) and Production Validation testing (PVT) guidelines\n\nKey Qualifications:\n\n• Following a degree program in electrical or mechatronic engineering\n• Strong analytical skills.\n• Strong communication skills.",
         deadline: "Open",
-        applicationLink: "https://egmh.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/17859",
+        applicationLink:
+          "https://egmh.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/17859",
       },
       {
         title: "Intern - Human Resources & Administration",
-        description: "Key Responsibilities:\n\n• Assist in managing headcount (HC) data and tracking employee movements.\n• Support HR Business Partnering activities and day-to-day HR operations.\n• Assist in maintaining HR trackers, reports, and basic dashboards.\n• Support employee engagement initiatives and internal communications.\n• Assist with HR documentation, system updates, and data verification.\n• Provide support for HR analytics and ad-hoc HR projects as required.\n\nKnowledge and Skills:\n\n• Currently pursuing or has completed a degree or diploma in Human Resource Management, Business Management, or Administration\n• Strong communication and interpersonal skills.\n• Proficient in working with numbers with good analytical ability.\n• An outgoing and proactive individual willing to take responsibility.\n• Ability to work independently with minimal supervision.",
+        description:
+          "Key Responsibilities:\n\n• Assist in managing headcount (HC) data and tracking employee movements.\n• Support HR Business Partnering activities and day-to-day HR operations.\n• Assist in maintaining HR trackers, reports, and basic dashboards.\n• Support employee engagement initiatives and internal communications.\n• Assist with HR documentation, system updates, and data verification.\n• Provide support for HR analytics and ad-hoc HR projects as required.\n\nKnowledge and Skills:\n\n• Currently pursuing or has completed a degree or diploma in Human Resource Management, Business Management, or Administration\n• Strong communication and interpersonal skills.\n• Proficient in working with numbers with good analytical ability.\n• An outgoing and proactive individual willing to take responsibility.\n• Ability to work independently with minimal supervision.",
         deadline: "Open",
-        applicationLink: "https://url.uk.m.mimecastprotect.com/s/FAhZCy6Dohr48AXpCZfxIx3lt_?domain=egmh.fa.us6.oraclecloud.com",
+        applicationLink:
+          "https://url.uk.m.mimecastprotect.com/s/FAhZCy6Dohr48AXpCZfxIx3lt_?domain=egmh.fa.us6.oraclecloud.com",
       },
       {
         title: "Assistant - Talent Acquisition Service Delivery",
-        description: "Key Responsibilities:\n\n• Ensure to process all recruitment requests via Recruitment Requisition Form process (RRFs) and the corresponding JDs etc., coordinating with required parties whilst, drafting recruitment specs and advertisements and obtaining relevant approvals\n• Conduct the screening and shortlisting process by evaluating applications received based on minimum criteria required to perform the job\n• Verifying applicant's details and verifying documentation and completing other standard protocols.\n• Schedule and conduct standard assessments relevant to the vacancy, whilst liaising with identified HODs for technical specific assessments\n• Conduct reference or clearance checks on the shortlisted candidates\n• Ensure to report and maintain key metrics designed to measure and predict staffing activity related to the post interview process\n• Conduct research on Technical and Soft Skills required for certain job roles to enhance the practical knowledge\n\nKnowledge and Skills:\n\n• Following a degree or a professional qualification in Human Resource Management.\n• 1 year of experience in Recruitment or Staffing.\n• Excellent communication and presentation skills.\n• Good interpersonal and relationship management skills.\n• Good time management with IT literacy.",
+        description:
+          "Key Responsibilities:\n\n• Ensure to process all recruitment requests via Recruitment Requisition Form process (RRFs) and the corresponding JDs etc., coordinating with required parties whilst, drafting recruitment specs and advertisements and obtaining relevant approvals\n• Conduct the screening and shortlisting process by evaluating applications received based on minimum criteria required to perform the job\n• Verifying applicant's details and verifying documentation and completing other standard protocols.\n• Schedule and conduct standard assessments relevant to the vacancy, whilst liaising with identified HODs for technical specific assessments\n• Conduct reference or clearance checks on the shortlisted candidates\n• Ensure to report and maintain key metrics designed to measure and predict staffing activity related to the post interview process\n• Conduct research on Technical and Soft Skills required for certain job roles to enhance the practical knowledge\n\nKnowledge and Skills:\n\n• Following a degree or a professional qualification in Human Resource Management.\n• 1 year of experience in Recruitment or Staffing.\n• Excellent communication and presentation skills.\n• Good interpersonal and relationship management skills.\n• Good time management with IT literacy.",
         deadline: "Open",
-        applicationLink: "https://url.uk.m.mimecastprotect.com/s/NECBC9py1IkOlrDqFEh7IqG9Be?domain=egmh.fa.us6.oraclecloud.com",
+        applicationLink:
+          "https://url.uk.m.mimecastprotect.com/s/NECBC9py1IkOlrDqFEh7IqG9Be?domain=egmh.fa.us6.oraclecloud.com",
       },
     ],
   },
@@ -63,14 +89,17 @@ export const nationalPartners: Partner[] = [
     logo: "/images/partners/Cargills - National Partner.jpg",
     category: "National Partner",
     description: "",
-    aboutCompany: "At Cargills, we are not just a Company; we are a cornerstone of Sri Lanka's vibrant economy. With a heritage spanning over 180 years, we have continuously evolved to become a leading force in multiple industries, including Retail, FMCG, Restaurants, Financial Services, Agribusiness, Cinemas, Hospitality, and Real Estate. Built on a strong foundation of values and ethics, we have spread our reach across Sri Lanka, with investments and operations that touch the lives of millions of consumers, farmers, and entrepreneurs on a daily basis. We are committed to leveraging technology to enhance operational excellence, create sustainable markets, and foster employment opportunities, all whilst actively engaging in initiatives that uplift communities and protect the environment to build a brighter future for all.",
+    aboutCompany:
+      "At Cargills, we are not just a Company; we are a cornerstone of Sri Lanka's vibrant economy. With a heritage spanning over 180 years, we have continuously evolved to become a leading force in multiple industries, including Retail, FMCG, Restaurants, Financial Services, Agribusiness, Cinemas, Hospitality, and Real Estate. Built on a strong foundation of values and ethics, we have spread our reach across Sri Lanka, with investments and operations that touch the lives of millions of consumers, farmers, and entrepreneurs on a daily basis. We are committed to leveraging technology to enhance operational excellence, create sustainable markets, and foster employment opportunities, all whilst actively engaging in initiatives that uplift communities and protect the environment to build a brighter future for all.",
     whyPartner: "Partnership information coming soon. Please check back later.",
-    collaboration: "Collaboration details coming soon. Please check back later.",
+    collaboration:
+      "Collaboration details coming soon. Please check back later.",
     whyJoin: "Details about why AIESECers should join coming soon.",
     opportunitiesList: [
       {
         title: "Intern/Executive - Marketing",
-        description: "Job Role:\n\nAssist in the development and execution of marketing campaigns tailored to various brands.\nPlay a lead role in Content Development for assigned projects.\nCollaborate with agencies and internal teams to generate, edit, and publish compelling content.\nPlay a lead role in performance marketing for selected brands.\nCoordinating promotional activities, events, and activations.\nDevelop trending content for social media platforms such as TikTok and Instagram.\nProvide input on constructive feedback based on customer/audience sentiments.\nResearch competition, investigate benchmarks and provide suggestions.\nPrepare and manage marketing budgets.\nTrack and report on marketing performance through detailed weekly/monthly reports.\nAssist in developing and executing innovative marketing strategies.\nAny other projects or tasks as requested by the Management.\n\nCandidate Requirements:\n\n• Passionate about Sri Lanka; you're committed to making a positive impact for our Country and its people.\n• Bachelor's Degree in Marketing, Business Management, or related discipline.\n• Professional qualification in CIM/APIDM/SLIM is a plus.\n• Prior experience in a similar role/function of 2 - 5 year's with a proven track record/accomplishments. Experience in FMCG is a plus.\n• Open to recent graduates and interns seeking practical experience.\n• Creative writing skills with the ability to craft compelling and engaging content.\n• Experience in managing social media platforms such as Facebook, Instagram, TikTok and LinkedIn.\n• Excellent communication skills in English & Sinhala. Tamil is a plus.\n• Prior experience with Meta ads manager, Google Analytics and Google Ads will be an added advantage.\n• A creative mindset and the ability to develop innovative and captivating content that resonates with the target audience.\n• Ability to work as a team player in multiple projects.\n• Prior experience working with marketing agencies is an added advantage.\n• Embody our Values: Customer Centric, Accountable, Respect, Green, Innovative, Love, Lead & Serve the Nation.\n• Should be able to work from Colombo.",
+        description:
+          "Job Role:\n\nAssist in the development and execution of marketing campaigns tailored to various brands.\nPlay a lead role in Content Development for assigned projects.\nCollaborate with agencies and internal teams to generate, edit, and publish compelling content.\nPlay a lead role in performance marketing for selected brands.\nCoordinating promotional activities, events, and activations.\nDevelop trending content for social media platforms such as TikTok and Instagram.\nProvide input on constructive feedback based on customer/audience sentiments.\nResearch competition, investigate benchmarks and provide suggestions.\nPrepare and manage marketing budgets.\nTrack and report on marketing performance through detailed weekly/monthly reports.\nAssist in developing and executing innovative marketing strategies.\nAny other projects or tasks as requested by the Management.\n\nCandidate Requirements:\n\n• Passionate about Sri Lanka; you're committed to making a positive impact for our Country and its people.\n• Bachelor's Degree in Marketing, Business Management, or related discipline.\n• Professional qualification in CIM/APIDM/SLIM is a plus.\n• Prior experience in a similar role/function of 2 - 5 year's with a proven track record/accomplishments. Experience in FMCG is a plus.\n• Open to recent graduates and interns seeking practical experience.\n• Creative writing skills with the ability to craft compelling and engaging content.\n• Experience in managing social media platforms such as Facebook, Instagram, TikTok and LinkedIn.\n• Excellent communication skills in English & Sinhala. Tamil is a plus.\n• Prior experience with Meta ads manager, Google Analytics and Google Ads will be an added advantage.\n• A creative mindset and the ability to develop innovative and captivating content that resonates with the target audience.\n• Ability to work as a team player in multiple projects.\n• Prior experience working with marketing agencies is an added advantage.\n• Embody our Values: Customer Centric, Accountable, Respect, Green, Innovative, Love, Lead & Serve the Nation.\n• Should be able to work from Colombo.",
         deadline: "2/27/2026",
         applicationLink: "https://forms.gle/RVgSi6uRwkVwoLnM7",
       },
@@ -82,18 +111,23 @@ export const nationalPartners: Partner[] = [
     logo: "/images/partners/Ceylinco Life - National Partner.png",
     category: "National Talent Partner",
     description: "",
-    aboutCompany: "Ceylinco Life has helped people progress towards their aspirations with peace of mind for over 37 years. Our insurance solutions are built around keeping you and those who you love secure, so that you can follow your goals and ambitions, free of any risks.",
+    aboutCompany:
+      "Ceylinco Life has helped people progress towards their aspirations with peace of mind for over 37 years. Our insurance solutions are built around keeping you and those who you love secure, so that you can follow your goals and ambitions, free of any risks.",
     partnerPortalVideo: "https://www.youtube.com/embed/NqWSpGSRITs",
-    whyPartner: "We believe that AIESEC has the best of what the youth has to offer and we have identified that there is a definite value match between AIESEC and Ceylinco Life. We hope that this partnership inspires leadership and creates a long standing and sustainable relationship between the two organizations.",
-    collaboration: "Our collaboration started in 2023 and we have witnessed the inspiring creativity and dynamism of AIESECers which prompted Ceylinco Life to forge a meaningful longterm partnership with AIESEC Sri Lanka.",
-    whyJoin: "An AIESECer is driven, motivated, and multi talented. They understand the results which emerge from hard work and they continuously seek to upscale their talents. These are valuable traits which are essential for any company.",
+    whyPartner:
+      "We believe that AIESEC has the best of what the youth has to offer and we have identified that there is a definite value match between AIESEC and Ceylinco Life. We hope that this partnership inspires leadership and creates a long standing and sustainable relationship between the two organizations.",
+    collaboration:
+      "Our collaboration started in 2023 and we have witnessed the inspiring creativity and dynamism of AIESECers which prompted Ceylinco Life to forge a meaningful longterm partnership with AIESEC Sri Lanka.",
+    whyJoin:
+      "An AIESECer is driven, motivated, and multi talented. They understand the results which emerge from hard work and they continuously seek to upscale their talents. These are valuable traits which are essential for any company.",
     opportunitiesList: [
-      {
-        title: "Internship Opportunities",
-        description: "We currently have internship opportunities in multiple departments at the Company.\n\nJoin Ceylinco Life and gain valuable experience in Sri Lanka's leading life insurance company. Work alongside industry professionals and develop skills that will shape your career.",
-        deadline: "Open",
-        applicationLink: "",
-      },
+      // {
+      //   title: "Internship Opportunities",
+      //   description:
+      //     "We currently have internship opportunities in multiple departments at the Company.\n\nJoin Ceylinco Life and gain valuable experience in Sri Lanka's leading life insurance company. Work alongside industry professionals and develop skills that will shape your career.",
+      //   deadline: "Open",
+      //   applicationLink: "",
+      // },
     ],
   },
   {
@@ -150,9 +184,9 @@ export const nationalPartners: Partner[] = [
     slug: "right-to-protein",
     logo: "/images/partners/Right to protein - National Partner.png",
     category: "National Talent Partner",
-    description: "Right To Protein is an awareness initiative to educate people about the importance of adequate protein consumption.",
+    description:
+      "Right To Protein is an awareness initiative to educate people about the importance of adequate protein consumption.",
   },
-
 ];
 
 export const globalPartners: Partner[] = [
@@ -250,77 +284,66 @@ export const globalPartners: Partner[] = [
     name: "Electrolux Professional",
     logo: "/images/partners/electrolux professional.png",
     category: "Global Affiliation",
-    description:
-      ".",
+    description: ".",
   },
   {
     name: "EY",
     logo: "/images/partners/ey.png",
     category: "Global Affiliation",
-    description:
-      ".",
+    description: ".",
   },
   {
     name: "HKTE",
     logo: "/images/partners/hkte.png",
     category: "Global Affiliation",
-    description:
-      ".",
+    description: ".",
   },
   {
     name: "IE University",
     logo: "/images/partners/ie University.png",
     category: "Global Affiliation",
-    description:
-      ".",
+    description: ".",
   },
   {
     name: "International Labour Organization",
     logo: "/images/partners/ILO.png",
     category: "Global Affiliation",
-    description:
-      ".",
+    description: ".",
   },
   {
     name: "InfoSys",
     logo: "/images/partners/infosys.png",
     category: "Global Affiliation",
-    description:
-      ".",
+    description: ".",
   },
   {
     name: "Project Everyone",
     logo: "/images/partners/project everyone.png",
     category: "Global Affiliation",
-    description:
-      ".",
+    description: ".",
   },
   {
     name: "SAP",
     logo: "/images/partners/sap.png",
     category: "Global Affiliation",
-    description:
-      ".",
+    description: ".",
   },
   {
     name: "Sensei",
     logo: "/images/partners/Sensei.png",
     category: "Global Affiliation",
-    description:
-      ".",
+    description: ".",
   },
   {
     name: "SLB",
     logo: "/images/partners/slb.jpg",
     category: "Global Affiliation",
-    description:
-      ".",
+    description: ".",
   },
   {
     name: "TOYOTA TSUSHO ",
     logo: "/images/partners/toyota.jpg",
     category: "Global Affiliation",
-    description:
-      ".",
+    description: ".",
   },
 ];
