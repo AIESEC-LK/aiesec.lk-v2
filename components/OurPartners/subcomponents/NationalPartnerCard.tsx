@@ -1,5 +1,6 @@
 "use client";
 import React, { memo, useMemo } from "react";
+import Link from "next/link";
 import { NationalPartnerCardProps } from "@/types/partner";
 
 const NationalPartnerCard = memo(({ partner }: NationalPartnerCardProps) => {
@@ -14,7 +15,7 @@ const NationalPartnerCard = memo(({ partner }: NationalPartnerCardProps) => {
     [] // Empty dependency array since colors are static
   );
 
-  return (
+  const cardContent = (
     <div className="max-w-xs group cursor-pointer mx-auto">
       {/* Card Container - Enhanced */}
       <div className="relative bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-96 flex flex-col hover:bg-gradient-to-br hover:from-white hover:to-gray-50 group-hover:-translate-y-1">
@@ -62,13 +63,12 @@ const NationalPartnerCard = memo(({ partner }: NationalPartnerCardProps) => {
           {/* Category Badge */}
           <div className="flex justify-center">
             <span
-              className={`text-xs font-semibold px-4 py-2 rounded-full transition-all duration-300 shadow-sm group-hover:shadow-md ${
-                partner.category === "National Partner"
+              className={`text-xs font-semibold px-4 py-2 rounded-full transition-all duration-300 shadow-sm group-hover:shadow-md ${partner.category === "National Partner"
                   ? "bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800 group-hover:from-amber-200 group-hover:to-yellow-200"
                   : partner.category === "National Talent Partner"
-                  ? "bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 group-hover:from-emerald-200 group-hover:to-green-200"
-                  : "bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 group-hover:from-slate-200 group-hover:to-gray-200"
-              }`}
+                    ? "bg-gradient-to-r from-emerald-100 to-green-100 text-emerald-800 group-hover:from-emerald-200 group-hover:to-green-200"
+                    : "bg-gradient-to-r from-slate-100 to-gray-100 text-slate-800 group-hover:from-slate-200 group-hover:to-gray-200"
+                }`}
             >
               {partner.category}
             </span>
@@ -80,6 +80,13 @@ const NationalPartnerCard = memo(({ partner }: NationalPartnerCardProps) => {
       </div>
     </div>
   );
+
+  // Only make MAS, Cargills, and Ceylinco Life cards clickable with link to their detail pages
+  if ((partner.slug === "mas" || partner.slug === "cargills" || partner.slug === "ceylinco-life") && partner.slug) {
+    return <Link href={`/partner/${partner.slug}`}>{cardContent}</Link>;
+  }
+
+  return cardContent;
 });
 
 NationalPartnerCard.displayName = "NationalPartnerCard";
