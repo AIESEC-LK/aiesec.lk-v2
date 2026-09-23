@@ -6,9 +6,7 @@ import config from '@payload-config'
 import { unstable_cache } from 'next/cache'
 
 import type { Company, Opportunity } from '@/payload-types'
-
-// Cache tag cleared by the Companies/Opportunities hooks after a save in /admin
-export const PARTNERS_CACHE_TAG = 'partners'
+import { PARTNERS_CACHE_TAG } from './cacheTags'
 
 export type PortalCompany = Pick<Company, 'id' | 'name' | 'slug' | 'logo' | 'category' | 'description'>
 

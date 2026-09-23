@@ -1,6 +1,7 @@
 import type { Access, CollectionConfig } from 'payload'
 
 import { adminOrOwnCompany, getCompanyId, isAdminUser } from '../access/roles'
+import { revalidatePartnersAfterChange, revalidatePartnersAfterDelete } from './hooks/revalidatePartners'
 
 // Partners may create only when their account is linked to a company
 const canCreate: Access = ({ req: { user } }) => isAdminUser(user) || Boolean(getCompanyId(user))
@@ -22,6 +23,9 @@ export const Opportunities: CollectionConfig = {
     delete: adminOrOwnCompany('company'),
   },
   hooks: {
+    // Public partner pages are cached; clear them after any change (drafts too, harmless)
+    afterChange: [revalidatePartnersAfterChange],
+    afterDelete: [revalidatePartnersAfterDelete],
     // Runs before validation, so the required company is set in time
     beforeValidate: [
       // A partner's opportunity always belongs to their own company, whatever was submitted

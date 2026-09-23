@@ -1,6 +1,7 @@
 import { slugField, type CollectionConfig } from 'payload'
 
 import { adminOrOwnCompany, isAdmin } from '../access/roles'
+import { revalidatePartnersAfterChange, revalidatePartnersAfterDelete } from './hooks/revalidatePartners'
 
 // Mirrors the Partner type in types/partner.ts
 export const Companies: CollectionConfig = {
@@ -14,6 +15,11 @@ export const Companies: CollectionConfig = {
     read: adminOrOwnCompany('id'),
     update: isAdmin,
     delete: isAdmin,
+  },
+  hooks: {
+    // Public partner pages are cached; clear them after any change
+    afterChange: [revalidatePartnersAfterChange],
+    afterDelete: [revalidatePartnersAfterDelete],
   },
   fields: [
     { name: 'name', type: 'text', required: true },
