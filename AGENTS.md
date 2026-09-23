@@ -5,7 +5,7 @@ Guide for AI coding agents (and humans) working on **aiesec.lk-v2**, the public 
 ## Stack
 
 - **Next.js 16** (App Router, Turbopack for `dev` and `build`), **React 19**, **TypeScript**.
-- **Tailwind CSS 4** (`app/globals.css`, `postcss.config.mjs`), **shadcn/ui**-style components in `components/ui` (Radix primitives, `class-variance-authority`, `tailwind-merge`).
+- **Tailwind CSS 4** (`app/(frontend)/globals.css`, `postcss.config.mjs`), **shadcn/ui**-style components in `components/ui` (Radix primitives, `class-variance-authority`, `tailwind-merge`).
 - Animation/visuals: `framer-motion`, `three`, `embla-carousel`.
 - Package manager: **npm** (`package-lock.json` is the source of truth; Docker runs `npm ci`). A stray `pnpm-lock.yaml` also exists — do not rely on it.
 - Planned (in progress): **Payload CMS 3** inside this Next.js app, with **MongoDB Atlas**, for partner/admin logins. See `.claude/.docs/cms-and-database-cba.md`.
@@ -14,11 +14,11 @@ Guide for AI coding agents (and humans) working on **aiesec.lk-v2**, the public 
 
 | Path | What it is for |
 |---|---|
-| `app/page.tsx`, `app/layout.tsx` | Home page and root layout (Poppins font, toast provider) |
-| `app/partner-portal/` | Partner portal listing page |
-| `app/partner/[slug]/` | Single partner page (company info + opportunities) |
-| `app/create-click-link/` | Internal helper page for building tracked links |
-| `app/privacy-and-cookie-policy/` | Legal page |
+| `app/(frontend)/page.tsx`, `app/(frontend)/layout.tsx` | Home page and root layout (Poppins font, toast provider) |
+| `app/(frontend)/partner-portal/` | Partner portal listing page |
+| `app/(frontend)/partner/[slug]/` | Single partner page (company info + opportunities) |
+| `app/(frontend)/create-click-link/` | Internal helper page for building tracked links |
+| `app/(frontend)/privacy-and-cookie-policy/` | Legal page |
 | `app/api/health/route.ts` | Health check used by the deploy script — **must keep returning 200** |
 | `components/<Section>/` | One folder per home-page section; `subcomponents/` for its parts |
 | `components/PartnerPortal/` | Partner portal UI |
