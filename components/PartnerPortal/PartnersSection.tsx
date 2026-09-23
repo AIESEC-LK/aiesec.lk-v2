@@ -1,43 +1,14 @@
 "use client";
 import React from "react";
 import PartnerCard from "./PartnerCard";
+import type { PortalCompany } from "@/lib/partners";
 
-// Partner data for the portal cards
-const nationalTalentPartners = [
-  {
-    id: 1,
-    name: "MAS Holdings",
-    logo: "/images/partners/MAS - National Partner.png",
-    category: "National Talent Partner",
-    description: "South Asia's largest design-to-delivery solution provider in apparel and textile manufacturing. Explore opportunities and join our team!",
-    link: "/partner/mas",
-    isInternal: true
-  },
-  {
-    id: 2,
-    name: "Cargills",
-    logo: "/images/partners/Cargills - National Partner.jpg",
-    category: "National Partner",
-    description: "A cornerstone of Sri Lanka's economy with over 180 years of heritage across Retail, FMCG, Restaurants, and more. Discover part-time opportunities!",
-    link: "/partner/cargills",
-    isInternal: true
-  },
-  {
-    id: 3,
-    name: "Ceylinco Life",
-    logo: "/images/partners/Ceylinco Life - National Partner.png",
-    category: "National Talent Partner",
-    description: "Sri Lanka's leading life insurance company with over 37 years of helping people achieve their aspirations. Explore internship opportunities!",
-    link: "/partner/ceylinco-life",
-    isInternal: true
-  }
-];
+type PartnersSectionProps = {
+  // null when the database couldn't be reached
+  companies: PortalCompany[] | null;
+};
 
-const nationalPartners = [
-
-];
-
-const PartnersSection = () => {
+const PartnersSection = ({ companies }: PartnersSectionProps) => {
   return (
     <section
       id="partners"
@@ -61,11 +32,30 @@ const PartnersSection = () => {
             </h3>
             <hr className="border-gray-300 mb-14" />
 
-            <div className="flex flex-wrap justify-center gap-8">
-              {nationalTalentPartners.map((partner) => (
-                <PartnerCard key={partner.id} partner={partner} />
-              ))}
-            </div>
+            {companies && companies.length > 0 ? (
+              <div className="flex flex-wrap justify-center gap-8">
+                {companies.map((company) => (
+                  <PartnerCard
+                    key={company.id}
+                    partner={{
+                      id: company.id,
+                      name: company.name,
+                      logo: company.logo,
+                      category: company.category,
+                      description: company.description ?? "",
+                      link: `/partner/${company.slug}`,
+                      isInternal: true,
+                    }}
+                  />
+                ))}
+              </div>
+            ) : (
+              <p className="text-center text-gray-500">
+                {companies
+                  ? "No partners to show yet. Check back soon!"
+                  : "Partners are unavailable right now. Please try again later."}
+              </p>
+            )}
           </div>
 
           {/* National Partners

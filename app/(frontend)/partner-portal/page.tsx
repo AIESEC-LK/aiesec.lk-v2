@@ -4,6 +4,10 @@ import PartnerHero from "@/components/PartnerPortal/PartnerHero";
 import PartnersSection from "@/components/PartnerPortal/PartnersSection";
 import Gallery from "@/components/PartnerPortal/Gallery";
 import Navigation from "@/components/Navigation/Navigation";
+import { getPortalCompanies } from "@/lib/partners";
+
+// Read partners from the database on each request, never during `next build` (CI has no DB)
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Partner Portal - AIESEC in Sri Lanka",
@@ -24,12 +28,14 @@ export const metadata = {
   },
 };
 
-export default function PartnerPortal() {
+export default async function PartnerPortal() {
+  const companies = await getPortalCompanies();
+
   return (
     <div className="min-h-screen">
       <Navigation />
       <PartnerHero />
-      <PartnersSection />
+      <PartnersSection companies={companies} />
       <Gallery />
       <Footer />
     </div>
