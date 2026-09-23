@@ -2,11 +2,14 @@
   "name": "aiesec.lk-v2",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "prepare": "husky"
+    "prepare": "husky",
+    "generate:types": "payload generate:types",
+    "generate:importmap": "payload generate:importmap"
   },
   "dependencies": {
     "@payloadcms/db-mongodb": "^3.90.2",

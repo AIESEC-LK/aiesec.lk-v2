@@ -68,6 +68,8 @@ export interface Config {
   blocks: {};
   collections: {
     users: User;
+    companies: Company;
+    opportunities: Opportunity;
     media: Media;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
@@ -77,6 +79,8 @@ export interface Config {
   collectionsJoins: {};
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
+    companies: CompaniesSelect<false> | CompaniesSelect<true>;
+    opportunities: OpportunitiesSelect<false> | OpportunitiesSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -123,6 +127,8 @@ export interface UserAuthOperations {
  */
 export interface User {
   id: string;
+  role: 'admin' | 'partner';
+  company?: (string | null) | Company;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -130,6 +136,7 @@ export interface User {
   resetPasswordExpiration?: string | null;
   salt?: string | null;
   hash?: string | null;
+  resetPasswordRequestedAt?: string | null;
   loginAttempts?: number | null;
   lockUntil?: string | null;
   sessions?:
@@ -141,6 +148,44 @@ export interface User {
     | null;
   password?: string | null;
   collection: 'users';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "companies".
+ */
+export interface Company {
+  id: string;
+  name: string;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  logo: string;
+  category: string;
+  description: string;
+  aboutCompany?: string | null;
+  partnerPortalVideo?: string | null;
+  whyPartner?: string | null;
+  collaboration?: string | null;
+  whyJoin?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "opportunities".
+ */
+export interface Opportunity {
+  id: string;
+  title: string;
+  description: string;
+  deadline: string;
+  applicationLink?: string | null;
+  company?: (string | null) | Company;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -188,6 +233,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'users';
         value: string | User;
+      } | null)
+    | ({
+        relationTo: 'companies';
+        value: string | Company;
+      } | null)
+    | ({
+        relationTo: 'opportunities';
+        value: string | Opportunity;
       } | null)
     | ({
         relationTo: 'media';
@@ -240,6 +293,8 @@ export interface PayloadMigration {
  * via the `definition` "users_select".
  */
 export interface UsersSelect<T extends boolean = true> {
+  role?: T;
+  company?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;
@@ -247,6 +302,7 @@ export interface UsersSelect<T extends boolean = true> {
   resetPasswordExpiration?: T;
   salt?: T;
   hash?: T;
+  resetPasswordRequestedAt?: T;
   loginAttempts?: T;
   lockUntil?: T;
   sessions?:
@@ -256,6 +312,39 @@ export interface UsersSelect<T extends boolean = true> {
         createdAt?: T;
         expiresAt?: T;
       };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "companies_select".
+ */
+export interface CompaniesSelect<T extends boolean = true> {
+  name?: T;
+  generateSlug?: T;
+  slug?: T;
+  logo?: T;
+  category?: T;
+  description?: T;
+  aboutCompany?: T;
+  partnerPortalVideo?: T;
+  whyPartner?: T;
+  collaboration?: T;
+  whyJoin?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "opportunities_select".
+ */
+export interface OpportunitiesSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  deadline?: T;
+  applicationLink?: T;
+  company?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
