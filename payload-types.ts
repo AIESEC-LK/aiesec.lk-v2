@@ -163,7 +163,7 @@ export interface Company {
   slug: string;
   logo: string;
   category: string;
-  description: string;
+  description?: string | null;
   aboutCompany?: string | null;
   partnerPortalVideo?: string | null;
   whyPartner?: string | null;

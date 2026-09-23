@@ -29,12 +29,14 @@ Guide for AI coding agents (and humans) working on **aiesec.lk-v2**, the public 
 | `.claude/.docs/` | Committed design/decision documents |
 | `.claude/.local/` | Git-ignored local notes and plans (`plans/`) |
 
-Content is currently **hard-coded** in `constants/`. There is no database or login yet.
+The public site still reads **hard-coded** content from `constants/`. Payload (admin panel at `/admin`) holds the same data in MongoDB: collections in `collections/`, access rules in `access/roles.ts` (roles: `admin`, `partner`; partners manage only their own company's opportunities).
 
 ## Build and run
 
 - `npm run dev` — local dev server.
 - `npm run build` — production build (`output: "standalone"`).
+- `npm run seed` — copies the three /partner-portal partners (MAS, Cargills, Ceylinco Life) and their opportunities from `constants/patners.ts` into the database in `DATABASE_URL` (Payload). Safe to re-run: updates instead of duplicating. Point `.env` at your own test database first.
+- `npm run generate:types` — regenerates `payload-types.ts` after changing collections (the dev server also does this).
 - Husky `pre-push` hook runs `npm run build`; the push is blocked if the build fails.
 
 ## Deployment

@@ -21,7 +21,8 @@ export const Companies: CollectionConfig = {
     // Image path or URL, as in constants/patners.ts
     { name: 'logo', type: 'text', required: true },
     { name: 'category', type: 'text', required: true, admin: { position: 'sidebar' } },
-    { name: 'description', type: 'textarea', required: true },
+    // Optional: some existing partners have an empty description
+    { name: 'description', type: 'textarea' },
     { name: 'aboutCompany', type: 'textarea' },
     { name: 'partnerPortalVideo', type: 'text' },
     { name: 'whyPartner', type: 'textarea' },
