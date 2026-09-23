@@ -10,6 +10,18 @@ import { nationalPartners } from '../constants/patners'
 // Only the partners currently featured on /partner-portal
 const PORTAL_SLUGS = ['mas', 'cargills', 'ceylinco-life']
 
+// Short card texts from the old hard-coded PartnersSection (description is empty in constants)
+const CARD_DESCRIPTIONS: Record<string, string> = {
+  mas: "South Asia's largest design-to-delivery solution provider in apparel and textile manufacturing. Explore opportunities and join our team!",
+  cargills:
+    "A cornerstone of Sri Lanka's economy with over 180 years of heritage across Retail, FMCG, Restaurants, and more. Discover part-time opportunities!",
+  'ceylinco-life':
+    "Sri Lanka's leading life insurance company with over 37 years of helping people achieve their aspirations. Explore internship opportunities!",
+}
+
+// The seed runs outside Next.js, so skip cache revalidation hooks
+const context = { disableRevalidate: true }
+
 const payload = await getPayload({ config })
 
 let companiesCreated = 0
@@ -21,7 +33,8 @@ const partners = nationalPartners.filter((p) => p.slug && PORTAL_SLUGS.includes(
 
 for (const partner of partners) {
   // Slugs are kept exactly, so current /partner/<slug> URLs keep working
-  const { opportunitiesList = [], slug, ...fields } = partner as typeof partner & { slug: string }
+  const { opportunitiesList = [], slug, ...rest } = partner as typeof partner & { slug: string }
+  const fields = { ...rest, description: CARD_DESCRIPTIONS[slug] || rest.description }
 
   const found = await payload.find({
     collection: 'companies',
@@ -30,8 +43,8 @@ for (const partner of partners) {
   })
 
   const company = found.docs[0]
-    ? await payload.update({ collection: 'companies', id: found.docs[0].id, data: { ...fields, slug } })
-    : await payload.create({ collection: 'companies', data: { ...fields, slug } })
+    ? await payload.update({ collection: 'companies', id: found.docs[0].id, data: { ...fields, slug }, context })
+    : await payload.create({ collection: 'companies', data: { ...fields, slug }, context })
   if (found.docs[0]) companiesUpdated++
   else companiesCreated++
 
@@ -44,10 +57,10 @@ for (const partner of partners) {
     const data = { ...opportunity, company: company.id, _status: 'published' as const }
 
     if (existing.docs[0]) {
-      await payload.update({ collection: 'opportunities', id: existing.docs[0].id, data })
+      await payload.update({ collection: 'opportunities', id: existing.docs[0].id, data, context })
       opportunitiesUpdated++
     } else {
-      await payload.create({ collection: 'opportunities', data })
+      await payload.create({ collection: 'opportunities', data, context })
       opportunitiesCreated++
     }
   }
