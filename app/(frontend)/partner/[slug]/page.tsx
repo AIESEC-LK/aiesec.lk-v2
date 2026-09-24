@@ -1,10 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { nationalPartners, globalPartners } from "@/constants/patners";
 import Navigation from "@/components/Navigation/Navigation";
 import Footer from "@/components/Footer/Footer";
 import PartnerDetails from "@/components/PartnerPortal/PartnerDetails";
+import { getCompanyWithOpportunities } from "@/lib/partners";
+
+// Read from the database on each request, never during `next build` (CI has no DB)
+export const dynamic = "force-dynamic";
 
 type Props = {
   params: Promise<{
@@ -15,10 +18,8 @@ type Props = {
 export default async function PartnerPage({ params }: Props) {
   const { slug } = await params;
   
-  // Get partner from both national and global partners
-  const partner =
-    nationalPartners.find((p) => p.slug === slug) ||
-    globalPartners.find((p) => p.slug === slug);
+  // Published opportunities only; a database error goes to error.tsx
+  const partner = await getCompanyWithOpportunities(slug);
 
   if (!partner) {
     return (
@@ -51,15 +52,6 @@ export default async function PartnerPage({ params }: Props) {
       <Footer />
     </div>
   );
-}
-
-export function generateStaticParams() {
-  const allPartners = [...nationalPartners, ...globalPartners];
-  return allPartners
-    .filter((partner) => partner.slug) // Only include partners with a slug
-    .map((partner) => ({
-      slug: partner.slug as string,
-    }));
 }
 
 export function generateMetadata({ params }: Props) {

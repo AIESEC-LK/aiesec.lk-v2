@@ -1,5 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import { withPayload } from "@payloadcms/next/withPayload";
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   output: "standalone",
   experimental: {
     // Optimize bundle size
@@ -10,9 +12,13 @@ const nextConfig = {
   // Optimize images
   images: {
     formats: ["image/webp", "image/avif"],
-    domains: ['aiesec.lk', 'www.logos.aiesec.org', 'aiesec-logos.s3.eu-west-1.amazonaws.com'],
+    remotePatterns: [
+      { protocol: "https", hostname: "aiesec.lk" },
+      { protocol: "https", hostname: "www.logos.aiesec.org" },
+      { protocol: "https", hostname: "aiesec-logos.s3.eu-west-1.amazonaws.com" },
+    ],
     minimumCacheTTL: 60,
   },
 };
 
-module.exports = nextConfig;
+export default withPayload(nextConfig);

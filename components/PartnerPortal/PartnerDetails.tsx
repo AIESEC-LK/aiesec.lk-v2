@@ -2,10 +2,10 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Play } from "lucide-react";
-import { Partner } from "@/types/partner";
+import type { PartnerPageData } from "@/lib/partners";
 
 interface PartnerDetailsProps {
-  partner: Partner;
+  partner: PartnerPageData;
 }
 
 const PartnerDetails = ({ partner }: PartnerDetailsProps) => {
@@ -121,6 +121,15 @@ const PartnerDetails = ({ partner }: PartnerDetailsProps) => {
                 }
               />
             )}
+
+            {/* Extra sections added in /admin */}
+            {partner.extraSections?.map((section, index) => (
+              <Section
+                key={section.id ?? index}
+                title={section.title}
+                content={section.body}
+              />
+            ))}
           </div>
 
           {/* Sidebar */}
@@ -207,10 +216,10 @@ const PartnerDetails = ({ partner }: PartnerDetailsProps) => {
 
             {/* Modal Content */}
             <div className="p-6 space-y-6">
-              {partner.opportunitiesList && partner.opportunitiesList.length > 0 ? (
-                partner.opportunitiesList.map((opportunity, index) => (
+              {partner.opportunities.length > 0 ? (
+                partner.opportunities.map((opportunity) => (
                   <div
-                    key={index}
+                    key={opportunity.id}
                     className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-400/30 rounded-2xl p-6"
                   >
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-2">

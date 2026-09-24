@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface Partner {
-  id: number;
+  id: string;
   name: string;
   logo: string;
   category: string;
