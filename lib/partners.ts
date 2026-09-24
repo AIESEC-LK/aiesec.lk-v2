@@ -25,6 +25,7 @@ export type PartnerPageData = Pick<
   | 'whyPartner'
   | 'collaboration'
   | 'whyJoin'
+  | 'extraSections'
 > & { opportunities: PublicOpportunity[] }
 
 // Why unstable_cache: it saves each database answer and reuses it until a save in
@@ -74,6 +75,7 @@ const fetchPartnerPage = unstable_cache(
         whyPartner: true,
         collaboration: true,
         whyJoin: true,
+        extraSections: true,
       },
     })
     const company = docs[0]

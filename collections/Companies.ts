@@ -34,5 +34,17 @@ export const Companies: CollectionConfig = {
     { name: 'whyPartner', type: 'textarea' },
     { name: 'collaboration', type: 'textarea' },
     { name: 'whyJoin', type: 'textarea' },
+    // Optional extra title + paragraph sections, shown after the fixed ones in this order
+    {
+      name: 'extraSections',
+      type: 'array',
+      maxRows: 10,
+      labels: { singular: 'Section', plural: 'Extra Sections' },
+      admin: { initCollapsed: true },
+      fields: [
+        { name: 'title', type: 'text', required: true, maxLength: 120 },
+        { name: 'body', type: 'textarea', required: true, maxLength: 3000 },
+      ],
+    },
   ],
 }

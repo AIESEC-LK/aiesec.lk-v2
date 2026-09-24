@@ -169,6 +169,13 @@ export interface Company {
   whyPartner?: string | null;
   collaboration?: string | null;
   whyJoin?: string | null;
+  extraSections?:
+    | {
+        title: string;
+        body: string;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -329,6 +336,13 @@ export interface CompaniesSelect<T extends boolean = true> {
   whyPartner?: T;
   collaboration?: T;
   whyJoin?: T;
+  extraSections?:
+    | T
+    | {
+        title?: T;
+        body?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
 }

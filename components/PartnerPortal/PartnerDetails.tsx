@@ -121,6 +121,15 @@ const PartnerDetails = ({ partner }: PartnerDetailsProps) => {
                 }
               />
             )}
+
+            {/* Extra sections added in /admin */}
+            {partner.extraSections?.map((section, index) => (
+              <Section
+                key={section.id ?? index}
+                title={section.title}
+                content={section.body}
+              />
+            ))}
           </div>
 
           {/* Sidebar */}
